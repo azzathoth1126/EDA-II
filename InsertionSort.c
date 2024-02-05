@@ -3,8 +3,8 @@
 int main() {
     double list[] = {2, 3, 6, 1, 4, 8, 5, 9, 7, 10};
     int n = 10;
-    printf("-----Código de ordenamiento-----\n");
-    printf("---------Insertion Sort---------\n");
+    printf("'\t-----Código de ordenamiento-----\n");
+    printf("\t---------Insertion Sort---------\n");
     
     for(int i = 1; i < n; i++) {
         double index = list[i];
@@ -17,7 +17,7 @@ int main() {
         list[j + 1] = index;
     }
     
-    printf("{");
+    printf("\t\n\n{");
     for(int a = 0; a < 10; a++) {
         printf("%.0f", list[a]);
         if (a < 9) {
