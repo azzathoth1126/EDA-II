@@ -8,26 +8,24 @@ int main() {
     int i = n;
     bool ver = true;
 
+    printf("\n\n");
     printf("'\t-----Código de ordenamiento-----\n");
     printf("\t-----------Bubble Sort-----------\n");
     
     while(i>=1 && ver == true) {
         ver = false;
+
         for(int j=0; j<n; j++) {
             if(list[j]>list[j+1]) {
-                
                 int a = list[j];
                 list[j] = list[j+1];
                 list[j+1] = a;
+
                 ver = true;
             }
         }
         i = i-1;
     }
-    
-    // for(int x=0; x<n; x++) {
-    //         printf("%d ", list[x]);
-    //     }
 
     printf("\t\n\n{");
     for(int a = 0; a < 10; a++) {
