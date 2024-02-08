@@ -33,7 +33,6 @@ void insertionSort(int a[], int n){
 		}
 		a[j]=aux;
 
-
 		printf("\nIteracion numero %d \n",i);
 		printArray(a,n);
 	}
