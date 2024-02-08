@@ -1,5 +1,6 @@
 #include "ordenamientos.h"
 #include <stdio.h>
+#include <stdbool.h>
 
 
 void selectionSort(int arreglo[], int n){
@@ -37,3 +38,24 @@ void insertionSort(int a[], int n){
 		printArray(a,n);
 	}
 }
+
+//Agregado en la clase
+void bubblesort(int a[], int n){
+	int i = n, j;
+	bool ver = true;
+
+	while(i>=1 && ver == true) {
+			ver = false;
+
+			for(j=0; j<n; j++) {
+				if(list[j]>list[j+1]) {
+					swap(&list[j], &list[j+1])
+					ver = true;
+				}
+			}
+			i = i-1;
+		
+		printf("\nIteracion numero %d \n",i+1);
+		printArray(arreglo,n);
+	}
+}	
