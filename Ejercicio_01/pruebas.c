@@ -13,14 +13,15 @@ void bubbleSort(int a[], int n);
 int main(){
 
     //int arreglo[] = {20,34,754,1,46,74,23,74,12,42,1,72,0,3,1,6,72,40,91,321};
-    int arreglo[20] = {};
+    int arreglo[20];
 
     printf("--------Progama de ordenamiento--------\n\n");
     printf("Dame los 20 numeros del arreglo: ");
     for(int i=0; i<20; i++){
-        scanf("Numero  %d", &arreglo[i]);   
+        printf("Numero %d", i);
+        scanf("%d", &arreglo[i]); 
+        printf("\n");  
     }
-    
     
     int n = sizeof(arreglo)/sizeof(arreglo[0]);
     int opcion;
