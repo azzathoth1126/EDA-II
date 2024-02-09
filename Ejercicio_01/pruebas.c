@@ -12,13 +12,37 @@ void bubbleSort(int a[], int n);
 
 int main(){
 
-    int arreglo[] = {3,21,7,2,95,23,1,0};
-    int n = sizeof(arreglo)/sizeof(arreglo[0]);
+    //int arreglo[] = {20,34,754,1,46,74,23,74,12,42,1,72,0,3,1,6,72,40,91,321};
+    int arreglo[20] = {};
 
-    //selectionSort(arreglo, n);
-    //insertionSort(arreglo, n);
-    bubbleSort(arreglo, n);
+    printf("--------Progama de ordenamiento--------\n\n");
+    printf("Dame los 20 numeros del arreglo: ");
+    for(int i=0; i<20; i++){
+        scanf("Numero  %d", &arreglo[i]);   
+    }
     
+    
+    int n = sizeof(arreglo)/sizeof(arreglo[0]);
+    int opcion;
+
+    printf("Escoge un de los siguientes algoritmos de ordenamieto: ");
+    printf("\n   1.- SelectionSort");
+    printf("\n   2.- InsertionSort");
+    printf("\n   3.- BubbleSort\n");
+    scanf("Algoritmo: %d", &opcion);
+    
+    switch (opcion) {
+        case 1:
+            selectionSort(arreglo, n);
+            break;
+        case 2:
+            insertionSort(arreglo, n);
+            break;
+        case 3:
+            bubbleSort(arreglo, n);
+            break;
+    }
+
     return 0;
 }
 
