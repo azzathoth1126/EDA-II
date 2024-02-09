@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 //Primera prueba lista - lista
 void selectionSort(int arreglo[], int n);
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
 //Segunda prueba - lista
 void insertionSort(int a[], int n);
-//Tercera prueba 
+//Tercera prueba - lista
 void bubbleSort(int a[], int n);
 
 int main(){
@@ -15,6 +17,7 @@ int main(){
 
     //selectionSort(arreglo, n);
     //insertionSort(arreglo, n);
+    bubbleSort(arreglo, n);
     
     return 0;
 }
@@ -31,7 +34,7 @@ void selectionSort(int arreglo[], int n){
 			swap(&arreglo[i],&arreglo[indiceMenor]);
 		}
 
-		printf("\nIteracion numero %d \n",i+1);
+		printf("\nSelectionSort- Iteracion numero %d \n",i+1);
 		printArray(arreglo,n);
 	}
 }
@@ -49,7 +52,27 @@ void insertionSort(int a[], int n){
 		}
 		a[j]=aux;
 
-		printf("\nIteracion numero %d \n",i);
+		printf("\nInsertionSort - Iteracion numero %d \n",i);
+		printArray(a,n);
+	}
+}
+
+void bubbleSort(int a[], int n){
+	int i = n, j;
+	bool ver = true;
+
+	while(i>=1 && ver == true) {
+			ver = false;
+
+			for(j=0; j<n; j++) {
+				if(a[j]>a[j+1]) {
+					swap(&a[j], &a[j+1]);
+					ver = true;
+				}
+			}
+			i = i-1;
+		
+		printf("\nBubbleSort - Iteracion numero %d \n",i+1);
 		printArray(a,n);
 	}
 }
