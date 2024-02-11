@@ -9,24 +9,19 @@ void swap(int* a, int* b);
 void insertionSort(int a[], int n);
 //Tercera prueba - lista
 void bubbleSort(int a[], int n);
+//Cuarta prueba - lista
+void llenarArreManual(int a[]);
 
 int main(){
 
-    //int arreglo[] = {20,34,754,1,46,74,23,74,12,42,1,72,0,3,1,6,72,40,91,321};
-    int arreglo[20];
+    int arreglo[20], opcion;
+	int n = sizeof(arreglo)/sizeof(arreglo[0]);
 
     printf("--------Progama de ordenamiento--------\n\n");
-    printf("Dame los 20 numeros del arreglo: ");
-    for(int i=0; i<20; i++){
-        printf("Numero %d", i);
-        scanf("%d", &arreglo[i]); 
-        printf("\n");  
-    }
     
-    int n = sizeof(arreglo)/sizeof(arreglo[0]);
-    int opcion;
+	llenarArreManual(arreglo);
 
-    printf("Escoge un de los siguientes algoritmos de ordenamieto: ");
+    printf("\nEscoge un de los siguientes algoritmos de ordenamieto: ");
     printf("\n   1.- SelectionSort");
     printf("\n   2.- InsertionSort");
     printf("\n   3.- BubbleSort\n");
@@ -113,4 +108,14 @@ void swap(int* a, int* b){
     int t = *a;
     *a = *b;
     *b = t;
+}
+
+void llenarArreManual(int a[]) {
+	int num;
+	printf("Dame los 20 numeros del arreglo: \n");
+    for(int i=0; i<20; i++){
+    	printf("Numero %d: ", i+1);
+        scanf("%d", &num); 
+		a[i] = num;
+    }
 }
