@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-//Primera prueba lista - lista
+//Funciones de Ordenamiento
+void insertionSort(int a[], int n);
 void selectionSort(int arreglo[], int n);
+void bubbleSort(int a[], int n);
+
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
-//Segunda prueba - lista
-void insertionSort(int a[], int n);
-//Tercera prueba - lista
-void bubbleSort(int a[], int n);
-//Cuarta prueba - lista
+//Funciones de llenado de arreglos
 void llenarArreManual(int a[]);
 
 int main(){
@@ -42,22 +41,6 @@ int main(){
     return 0;
 }
 
-void selectionSort(int arreglo[], int n){
-	int indiceMenor, i, j;
-	for (i=0; i<n-1; i++){
-		indiceMenor=i;
-		for(j = i+1; j<n; j++){
-			if(arreglo[j]<arreglo[indiceMenor])
-				indiceMenor=j;
-		}
-		if (i!=indiceMenor){
-			swap(&arreglo[i],&arreglo[indiceMenor]);
-		}
-
-		printf("\nSelectionSort- Iteracion numero %d \n",i+1);
-		printArray(arreglo,n);
-	}
-}
 
 void insertionSort(int a[], int n){
 	int i,j,k;
@@ -76,6 +59,25 @@ void insertionSort(int a[], int n){
 		printArray(a,n);
 	}
 }
+
+
+void selectionSort(int arreglo[], int n){
+	int indiceMenor, i, j;
+	for (i=0; i<n-1; i++){
+		indiceMenor=i;
+		for(j = i+1; j<n; j++){
+			if(arreglo[j]<arreglo[indiceMenor])
+				indiceMenor=j;
+		}
+		if (i!=indiceMenor){
+			swap(&arreglo[i],&arreglo[indiceMenor]);
+		}
+
+		printf("\nSelectionSort- Iteracion numero %d \n",i+1);
+		printArray(arreglo,n);
+	}
+}
+
 
 void bubbleSort(int a[], int n){
 	int i = n, j;
@@ -97,6 +99,7 @@ void bubbleSort(int a[], int n){
 	}
 }
 
+
 void printArray(int arr[],int size){
 	int i;
   	for (i=0; i < size; i++)
@@ -115,7 +118,7 @@ void llenarArreManual(int a[]) {
 	printf("Dame los 20 numeros del arreglo: \n");
     for(int i=0; i<20; i++){
     	printf("Numero %d: ", i+1);
-        scanf("%d", &num); 
+        scanf(" %d", &num); 
 		a[i] = num;
     }
 }
