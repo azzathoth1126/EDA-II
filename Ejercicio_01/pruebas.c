@@ -5,7 +5,7 @@
 void insertionSort(int a[], int n);
 void selectionSort(int arreglo[], int n);
 void bubbleSort(int a[], int n);
-
+//Funciones de Impresion en pantalla y cambio
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
 //Funciones de llenado de arreglos
@@ -24,7 +24,8 @@ int main(){
     printf("\n   1.- SelectionSort");
     printf("\n   2.- InsertionSort");
     printf("\n   3.- BubbleSort\n");
-    scanf("Algoritmo: %d", &opcion);
+	printf("Algoritmo: ");
+    scanf(" %d", &opcion);
     
     switch (opcion) {
         case 1:
