@@ -7,9 +7,12 @@
 void insertionSort(int a[], int n);
 void selectionSort(int arreglo[], int n);
 void bubbleSort(int a[], int n);
+void quickSort(int arr[], int low, int high);
+int partition (int arr[], int low, int high)
 //Funciones de Impresion en pantalla y cambio
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
+void printSubArray(int arr[],int low, int high);
 //Funciones de llenado de arreglos
 void arregloManual(int a[]);
 void arregloAleatorio(int a[]);
@@ -123,6 +126,33 @@ void bubbleSort(int a[], int n) {
 	}
 }
 
+//Agragado en el laboratorio
+void quickSort(int arr[], int low, int high) {
+    if (low < high)
+    {
+        int pi = partition(arr, low, high);
+        printSubArray(arr,low,pi-1);
+	  quickSort(arr, low, pi - 1);
+        printSubArray(arr,pi+1,high);
+	  quickSort(arr, pi + 1, high);
+    }
+}
+
+
+int partition (int arr[], int low, int high) {
+   	int pivot = arr[high];    
+	printf("Pivote: %d   \n ",pivot);
+	int j,i = (low - 1);  
+   	for (j = low; j <= high- 1; j++){
+       	if (arr[j] <= pivot){
+            		i++;    
+            		swap(&arr[i], &arr[j]);
+        	}
+    	}
+    	swap(&arr[i + 1], &arr[high]);
+	return (i + 1);
+}
+
 
 //Funcion de impresion de iteraciones de arreglos
 void printArray(int arr[],int size) {
@@ -139,6 +169,16 @@ void swap(int* a, int* b) {
     *a = *b;
     *b = t;
 }
+
+
+void printSubArray(int arr[],int low, int high) {
+    int i;
+    printf("Sub array :  ");
+	for (i=low; i <= high; i++)
+       printf("%d ", arr[i]);
+    printf("\n");
+}
+
 
 
 //Funcion de llenado de arreglos
