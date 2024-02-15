@@ -8,7 +8,7 @@ void insertionSort(int a[], int n);
 void selectionSort(int arreglo[], int n);
 void bubbleSort(int a[], int n);
 void quickSort(int arr[], int low, int high);
-int partition (int arr[], int low, int high)
+int partition (int arr[], int low, int high);
 //Funciones de Impresion en pantalla y cambio
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
@@ -40,14 +40,22 @@ int main(){
 		arregloAleatorio(arreglo);
 	}
 
+
+	printf("\nEl areglo es el siguiente: {");
+	printArray(arreglo, n);
+	printf("\b }");
+
+
 	//Menu de algoritmo de ordenamiento a escoger
     printf("\n\nEscoge un de los siguientes algoritmos de ordenamieto: ");
     printf("\n   1.- SelectionSort");
     printf("\n   2.- InsertionSort");
-    printf("\n   3.- BubbleSort\n");
-	opcion = 0;
+    printf("\n   3.- BubbleSort");
+	printf("\n   4.- QuickSort\n");
 	printf("\nAlgoritmo: ");
     scanf(" %d", &opcion);
+
+	
     
 	//Seleccion de forma de ordenar el arreglo
     switch (opcion) {
@@ -59,6 +67,13 @@ int main(){
             break;
         case 3:
             bubbleSort(arreglo, n);
+            break;
+		case 4:
+            quickSort(arreglo, 0, n-1);
+
+			printf("\nEl areglo ordenado es el siguiente: {");
+			printArray(arreglo, n);
+			printf("}");
             break;
     }
 
@@ -147,6 +162,7 @@ int partition (int arr[], int low, int high) {
        	if (arr[j] <= pivot){
             		i++;    
             		swap(&arr[i], &arr[j]);
+					
         	}
     	}
     	swap(&arr[i + 1], &arr[high]);
@@ -178,7 +194,6 @@ void printSubArray(int arr[],int low, int high) {
        printf("%d ", arr[i]);
     printf("\n");
 }
-
 
 
 //Funcion de llenado de arreglos
