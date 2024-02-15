@@ -39,7 +39,7 @@ void insertionSort(int a[], int n){
 	}
 }
 
-
+//Agregado en la clase
 void bubblesort(int a[], int n){
 	int i = n, j;
 	bool ver = true;
@@ -59,30 +59,3 @@ void bubblesort(int a[], int n){
 		printArray(arreglo,n);
 	}
 }	
-
-
-//Agregado en el laboratorio
-void HeapSort(int* A, int size) {
-	BuildHeap(A,size);
-  	int i;
-  	for(i = size - 1; i > 0; i--){
-    	swap(&A[0],&A[heapSize]);      
-      	heapSize--;
-      	printf("Iteracion HS: \n");
-  	printArray(A,size);
-	Heapify(A, 0,size);
-   }
-}
-
-
-void quickSort(int arr[], int low, int high)
-{
-    if (low < high)
-    {
-        int pi = partition(arr, low, high);
-        printSubArray(arr,low,pi-1);
-	  quickSort(arr, low, pi - 1);
-        printSubArray(arr,pi+1,high);
-	  quickSort(arr, pi + 1, high);
-    }
-}

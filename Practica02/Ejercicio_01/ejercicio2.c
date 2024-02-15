@@ -7,16 +7,9 @@
 void insertionSort(int a[], int n);
 void selectionSort(int arreglo[], int n);
 void bubbleSort(int a[], int n);
-//Agregado en clase
-void HeapSort(int* A, int size);
-void quickSort(int arr[], int low, int high);
 //Funciones de Impresion en pantalla y cambio
 void printArray(int arr[],int size);
 void swap(int* a, int* b);
-//Agregado en clase
-void Heapify(int* A, int i, int size);
-void BuildHeap(int* A, int size);
-int partition (int arr[], int low, int high);
 //Funciones de llenado de arreglos
 void arregloManual(int a[]);
 void arregloAleatorio(int a[]);
@@ -27,7 +20,6 @@ int main(){
 
     int arreglo[20], opcion;
 	int n = sizeof(arreglo)/sizeof(arreglo[0]);//Tamaño del arreglo
-	int heapSize; ///
 
 	//Menu - Como llenar el arreglo
     printf("\n\n--------Progama de ordenamiento--------\n\n");
@@ -47,11 +39,9 @@ int main(){
 
 	//Menu de algoritmo de ordenamiento a escoger
     printf("\n\nEscoge un de los siguientes algoritmos de ordenamieto: ");
-    printf("\n   1.- Selection Sort");
-    printf("\n   2.- Insertion Sort");
-    printf("\n   3.- Bubble Sort\n");
-	printf("\n   4.- Quick Sort\n");
-	printf("\n   4.- Heap Sortt\n");
+    printf("\n   1.- SelectionSort");
+    printf("\n   2.- InsertionSort");
+    printf("\n   3.- BubbleSort\n");
 	opcion = 0;
 	printf("\nAlgoritmo: ");
     scanf(" %d", &opcion);
@@ -67,13 +57,6 @@ int main(){
         case 3:
             bubbleSort(arreglo, n);
             break;
-		case 4:
-
-			break;
-
-		case 5:
-
-			break;
     }
 
     return 0;
@@ -140,32 +123,6 @@ void bubbleSort(int a[], int n) {
 	}
 }
 
-//Agregado en el laboratorio
-void HeapSort(int* A, int size) {
-	BuildHeap(A,size);
-  	int i;
-  	for(i = size - 1; i > 0; i--){
-    	swap(&A[0],&A[heapSize]);      
-      	heapSize--;
-      	printf("Iteracion HS: \n");
-  	printArray(A,size);
-	Heapify(A, 0,size);
-   }
-}
-
-
-void quickSort(int arr[], int low, int high)
-{
-    if (low < high)
-    {
-        int pi = partition(arr, low, high);
-        printSubArray(arr,low,pi-1);
-	  quickSort(arr, low, pi - 1);
-        printSubArray(arr,pi+1,high);
-	  quickSort(arr, pi + 1, high);
-    }
-}
-
 
 //Funcion de impresion de iteraciones de arreglos
 void printArray(int arr[],int size) {
@@ -181,51 +138,6 @@ void swap(int* a, int* b) {
     int t = *a;
     *a = *b;
     *b = t;
-}
-
-
-void Heapify(int* A, int i, int size) {
-	int l = 2 * i + 1;
-	int r = 2 * i + 2;
-	int largest;
-
-	if(l <= heapSize && A[l] > A[i])
-    	largest = l;
-  	else
-    	largest = i;
-  	if(r <= heapSize && A[r] > A[largest])
-    	largest = r;
-  	if(largest != i){
-    	swap(&A[i],&A[largest]);
-    	printArray(A,size);
-    	Heapify(A, largest,size);
-     }
-     
-}
-
-
-void BuildHeap(int* A, int size) {
-	heapSize = size - 1;
-  	int i;
-  	for(i = (size - 1) / 2; i >= 0; i--){
-		Heapify(A, i,size);
-  	}
-	printf("Termin%c de construir el HEAP \n",162);
-}
-
-
-int partition (int arr[], int low, int high) {
-   	int pivot = arr[high];    
-	printf("Pivote: %d   \n ",pivot);
-	int j,i = (low - 1);  
-   	for (j = low; j <= high- 1; j++){
-       	if (arr[j] <= pivot){
-            		i++;    
-            		swap(&arr[i], &arr[j]);
-        	}
-    	}
-    	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
 }
 
 
