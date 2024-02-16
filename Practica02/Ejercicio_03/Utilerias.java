@@ -1,18 +1,14 @@
-//package Practica1Eda2;
-
-
 public class Utilerias {
-    
-    public static void imprimirArreglo(int[] arreglo){
-        for(int i:arreglo){  
-            System.out.print(i+" ");  
-        }
-        System.out.println(" ");
+   public  static void printArray(int arr[]){
+        int n = arr.length;
+        for (int i=0; i<n; ++i)
+        System.out.print(arr[i]+" ");
+        System.out.println();
     }
 
-    public static void intercambiar(int[] arr, int x, int y) {
-        int temp = arr[x];   
-        arr[x] = arr[y];  
-        arr[y] = temp;
+    public static void swap(int arr[], int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }
