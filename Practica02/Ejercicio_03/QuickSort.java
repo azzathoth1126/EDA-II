@@ -1,4 +1,5 @@
-public class Quicksort {
+public class Quicksort{
+    
     static int partition(int arr[], int low, int high) {
         int pivot = arr[high];
         int i = (low-1);
@@ -22,3 +23,4 @@ public class Quicksort {
             QuickSort(arr, pi+1, high);
         }
     }
+}

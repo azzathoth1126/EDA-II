@@ -1,4 +1,5 @@
-public class Utilerias {
+public class Utilerias{
+
    public  static void printArray(int arr[]){
         int n = arr.length;
         for (int i=0; i<n; ++i)
