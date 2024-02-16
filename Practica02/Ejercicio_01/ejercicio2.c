@@ -21,12 +21,15 @@ void arregloManual(int a[]);
 void arregloAleatorio(int a[]);
 
 
+//Variable global
+int heapSize;
+
+
 //Funcion principal
 int main(){
 
     int arreglo[20], opcion;
 	int n = sizeof(arreglo)/sizeof(arreglo[0]);//Tamaño del arreglo
-	int heapSize;
 
 	//Menu - Como llenar el arreglo
     printf("\n\n--------Progama de ordenamiento--------\n\n");
