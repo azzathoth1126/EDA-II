@@ -219,7 +219,7 @@ void BuildHeap(int* A, int size) {
   	for(i = (size - 1) / 2; i >= 0; i--){
 		Heapify(A, i,size);
   	}
-	printf("Termino de construir el HEAP \n",162);
+	printf("Termino%c de construir el HEAP \n",162);
 }
 
 
