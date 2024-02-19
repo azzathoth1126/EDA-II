@@ -58,7 +58,8 @@ int main(){
     printf("\n   1.- SelectionSort");
     printf("\n   2.- InsertionSort");
     printf("\n   3.- BubbleSort");
-	printf("\n   4.- QuickSort\n");
+	printf("\n   4.- QuickSort");
+	printf("\n   5.- HeapSort\n");
 	printf("\nAlgoritmo: ");
     scanf(" %d", &opcion);
 
