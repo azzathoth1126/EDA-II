@@ -85,6 +85,10 @@ int main(){
             break;
 		case 5:
             HeapSort(arreglo, n);
+
+			printf("\nEl areglo ordenado es el siguiente: {");
+			printArray(arreglo, n);
+			printf("\b }");
             break;
     }
 
@@ -219,7 +223,7 @@ void BuildHeap(int* A, int size) {
   	for(i = (size - 1) / 2; i >= 0; i--){
 		Heapify(A, i,size);
   	}
-	printf("Termino%c de construir el HEAP \n",162);
+	printf("Termino%c  de construir el HEAP \n",162);
 }
 
 
