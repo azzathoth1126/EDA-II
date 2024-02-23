@@ -5,10 +5,6 @@ public class CountingSort {
     }
 
 
-
-    public static void FindMax(char letras[]) {
-        
-    
-    }
+    public static void FindMax(char letras[]) {}
 
 }

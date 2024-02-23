@@ -11,18 +11,14 @@ public class Principal{
 
         //Llena el arreglo
         System.out.println("Dame las letras del arreglo");
-        for (int i =0; i<tam; i++){
+        for (int i = 0; i < tam; i++){
             System.out.println("Elemento: " + (i + 1) + ": ");
             letras [i] = scanner.nextLine().charAt(0);
         }
 
+        CountingSort.CountingSort(letras, tam);
+
         //Imprime el arreglo
-        System.out.println("\nEl arreglo es: ");
-        for(char letra:letras){
-            System.out.println(letra + " ");
-        }
-
-
-
+        Utilerias.PrintArray(letras, tam);
     }
 }
