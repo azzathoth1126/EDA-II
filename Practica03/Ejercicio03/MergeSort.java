@@ -1,15 +1,6 @@
 public class MergeSort {
     
-    void printArray(int arr[]) 
-    { 
-        int n = arr.length; 
-        for (int i=0; i<n; ++i) 
-            System.out.print(arr[i] + " "); 
-        System.out.println(); 
-    } 
-    
-    void merge(int arr[], int l, int m, int r) 
-    { 
+    public static void merge(int arr[], int l, int m, int r) { 
         int n1 = m - l + 1; 
         int n2 = r - m; 
   
@@ -24,15 +15,12 @@ public class MergeSort {
         int i = 0, j = 0; 
   
         int k = l; 
-        while (i < n1 && j < n2) 
-        { 
-            if (L[i] <= R[j]) 
-            { 
+        while (i < n1 && j < n2) { 
+            if (L[i] <= R[j]) { 
                 arr[k] = L[i]; 
                 i++; 
             } 
-            else
-            { 
+            else { 
                 arr[k] = R[j]; 
                 j++; 
             } 
@@ -52,7 +40,7 @@ public class MergeSort {
         } 
     } 
   
-    void sort(int arr[], int l, int r) { 
+    public static void sort(int arr[], int l, int r) { 
         if (l < r) { 
             int m = (l+r)/2; 
   
@@ -61,8 +49,5 @@ public class MergeSort {
   
             merge(arr, l, m, r); 
         } 
-    }
-
-    
-    
+    }    
 }
