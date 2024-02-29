@@ -2,8 +2,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Principal {
+
     public static void main(String[] args) {
         List<Integer> lista1 = new LinkedList<>() ;
+
+        int elemSearch = 29;
 
         lista1.add(15);
         //[Aquí agrega 5 instrucciones más de “add” con los elements que quieras]
@@ -43,6 +46,8 @@ public class Principal {
         imprimirLista(lista3);
         System.out.println(lista1.equals(lista2));
 
+        VerFal(lista1, elemSearch);
+
     }
 
     public static void imprimirLista(List<Integer> listaPrint){
@@ -53,6 +58,7 @@ public class Principal {
             //i++;
         }
     }
+
 }
 
 
