@@ -10,44 +10,51 @@ public class Principal {
         lista1.add(18);
         lista1.add(19);
         lista1.add(26);
-        lista1.add(5);
-        lista1.add(19);
+        lista1.add(27);
+        lista1.add(29);
         //Fin del los 5 elementos agregados
         lista1.add(80);
 
-        System.out.println(" Estado 1 ");
+        System.out.println("\n Estado 1 ");
         imprimirLista(lista1);
-        System.out.println(" *** ");
+        System.out.println("\n *** ");
 
         lista1.add(2,300);
         lista1.add(4,500);
         lista1.add(5,700);
 
-        System.out.println(" Estado 2 ");
+        System.out.println("\n Estado 2 ");
         imprimirLista(lista1);
-        System.out.println(" *** ");
+        System.out.println("\n *** ");
 
         lista1.set(1, 14);
         lista1.set(2, 16);
         lista1.set(7, 18);
 
-        System.out.println(" Estado 3 ");
+        System.out.println("\n Estado 3 ");
         imprimirLista(lista1);
-        System.out.println(" *** ");
+        System.out.println("\n *** ");
 
         List<Integer> lista2, lista3;
         lista2 = lista1.subList(2, 4);
         lista3 = lista1.subList(2, 4);
         imprimirLista(lista2);
-        System.out.println(" *** ");
+        System.out.println("\n *** ");
         imprimirLista(lista3);
         System.out.println(lista1.equals(lista2));
 
     }
 
     public static void imprimirLista(List<Integer> listaPrint){
+        int i = 0;
         for(Integer var : listaPrint){
-            System.out.println(var);
+            System.out.println("P " + i++ + ": " + var);
+            //System.out.println(var);
+            //i++;
         }
     }
 }
+
+
+//add agrega un elemento en la lista en la posición que quieras
+//set cambia un elemento de la lista en la posción que eliges
