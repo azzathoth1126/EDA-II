@@ -46,7 +46,7 @@ public class Principal {
         imprimirLista(lista3);
         System.out.println(lista1.equals(lista2));
 
-        VerFal(lista1, elemSearch);
+        VerFal(lista3, elemSearch);
 
     }
 
