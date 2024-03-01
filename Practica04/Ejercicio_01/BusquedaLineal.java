@@ -5,7 +5,6 @@ import java.util.List;
 public class BusquedaLineal {
 
     public static void VerFal(List<Integer> lista, int elemSearch) {
-        int tam = lista.size();
         int com = 0;
         
         for (int elemento: lista) {
@@ -19,13 +18,14 @@ public class BusquedaLineal {
             System.out.println("False");
         }
     }
-    /*
-    public static void Indices (int list) {
+    
+    public static void Indices (List<Integer> lista, int elemSearch) {
+
+
     }
 
 
     public static void Retidas (int list) {
     }  
-    */
 
 }
