@@ -46,7 +46,7 @@ public class Principal {
         imprimirLista(lista3);
         System.out.println(lista1.equals(lista2));
 
-        VerFal(lista3, elemSearch);
+        BusquedaLineal.VerFal(lista1, elemSearch);
 
     }
 
@@ -54,8 +54,6 @@ public class Principal {
         int i = 0;
         for(Integer var : listaPrint){
             System.out.println("P " + i++ + ": " + var);
-            //System.out.println(var);
-            //i++;
         }
     }
 
@@ -64,3 +62,7 @@ public class Principal {
 
 //add agrega un elemento en la lista en la posición que quieras
 //set cambia un elemento de la lista en la posción que eliges
+
+//          Elementos del metodo imprimirLista
+//          System.out.println(var);
+//          i++;
