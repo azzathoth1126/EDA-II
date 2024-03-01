@@ -6,7 +6,7 @@ public class Principal {
     public static void main(String[] args) {
         List<Integer> lista1 = new LinkedList<>() ;
 
-        int elemSearch = 19;
+        int elemSearch = 26;
 
         lista1.add(15);
         //[Aquí agrega 5 instrucciones más de “add” con los elements que quieras]
@@ -44,19 +44,12 @@ public class Principal {
         imprimirLista(lista2);
         System.out.println("\n *** ");
         imprimirLista(lista3);
-        System.out.println(lista1.equals(lista2));
-
-        /*
-        System.out.println("\nImprimiendo lista 1");
-        imprimirLista(lista1);
-        System.out.println("\nImprimiendo lista 2");
-        imprimirLista(lista2);
-        System.out.println("\nImprimiendo lista 3");
-        imprimirLista(lista3);
-        */
+        System.out.println(lista1.equals(lista2));        
 
         System.out.println("\nBuscando el elemento " + elemSearch + " :");
         BusquedaLineal.VerFal(lista1, elemSearch);
+        BusquedaLineal.Indices(lista1, elemSearch);
+        BusquedaLineal.Repetidos(lista1, elemSearch);
 
     }
 
@@ -76,3 +69,13 @@ public class Principal {
 //          Elementos del metodo imprimirLista
 //          System.out.println(var);
 //          i++;
+
+
+/**
+        System.out.println("\nImprimiendo lista 1");
+        imprimirLista(lista1);
+        System.out.println("\nImprimiendo lista 2");
+        imprimirLista(lista2);
+        System.out.println("\nImprimiendo lista 3");
+        imprimirLista(lista3);
+ */
