@@ -1,5 +1,7 @@
-import java.util.Scanner; //Librerias para ingresar datos desde teclado
+//Librerias para ingresar datos desde teclado
+import java.util.Scanner; 
 
+//Clase principal
 public class Principal{
 
     public static void main(String args[]){
@@ -9,14 +11,11 @@ public class Principal{
         char[] letras = new char[20]; //Crea un arreglo de 20 espacios
         int tam = letras.length; //Tamaño del arreglo
 
-        //Llena el arreglo
-        Utilerias.LLenadoArray(letras);
+        Utilerias.LLenadoArray(letras); //Llena el arreglo
         
 
         //CountingSort.CountingSort(letras, tam);
 
-
-        //Imprime el arreglo
-        Utilerias.PrintArray(letras, tam);
+        Utilerias.PrintArray(letras, tam);//Imprime el arreglo
     }
 }
