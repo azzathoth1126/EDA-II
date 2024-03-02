@@ -12,10 +12,13 @@ public class Principal{
         int tam = letras.length; //Tamaño del arreglo
 
         Utilerias.LLenadoArray(letras); //Llena el arreglo
+
+    System.out.println("\nArreglo desordenado: ");
+        Utilerias.PrintArray(letras, tam);
         
+        CountingSort.countingSort(letras);
 
-        //CountingSort.CountingSort(letras, tam);
-
+        System.out.println("\nArreglo ordenado: ");
         Utilerias.PrintArray(letras, tam);//Imprime el arreglo
     }
 }

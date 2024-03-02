@@ -5,13 +5,9 @@ public class Utilerias {
 
     //Imprime el Arreglo
     public static void PrintArray (char letras[], int tam) {
-        
-        System.out.println("\n\nArreglo: ");
-
         for (int i = 0; i < tam; ++i)
             System.out.print(letras[i] + " ");
             System.out.println();
-
     }
 
     //LLena el arreglo de forma manual por el usuario

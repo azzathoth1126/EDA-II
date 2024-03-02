@@ -1,10 +1,31 @@
 public class CountingSort {
-    
-    public static void CountingSort(char letras[], int tam[]) {
-        
+
+    public static void countingSort (char[] arr) {
+        int n = arr.length;
+        char[] output = new char[n];
+
+        // Inicializar el arreglo de conteo
+        int[] count = new int[10]; // Dado que el rango es de 'a' a 'j'
+
+        // Contar la frecuencia de cada letra
+        for (int i = 0; i < n; i++) {
+            count[arr[i] - 'a']++;
+        }
+
+        // Calcular las posiciones finales de cada letra en el arreglo ordenado
+        for (int i = 1; i < 10; i++) {
+            count[i] += count[i - 1];
+        }
+
+        // Construir el arreglo ordenado
+        for (int i = n - 1; i >= 0; i--) {
+            output[count[arr[i] - 'a'] - 1] = arr[i];
+            count[arr[i] - 'a']--;
+        }
+
+        // Copiar el arreglo ordenado al arreglo original
+        for (int i = 0; i < n; i++) {
+            arr[i] = output[i];
+        }
     }
-
-
-    public static void FindMax(char letras[]) {}
-
 }
