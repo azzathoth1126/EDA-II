@@ -1,11 +1,11 @@
 public class CountingSort {
 
     public static void countingSort (char[] arr) {
-        int n = arr.length;
-        char[] output = new char[n];
+        int n = arr.length;//Tamaño del arreglo
+        char[] output = new char[n];//Arrelgo auxliar
 
-        // Inicializar el arreglo de conteo
-        int[] count = new int[10]; // Dado que el rango es de 'a' a 'j'
+        // Inicializa el arreglo del conteo
+        int[] count = new int[10]; // 10 por que el rango es de 'a' a 'j'
 
         // Contar la frecuencia de cada letra
         for (int i = 0; i < n; i++) {
