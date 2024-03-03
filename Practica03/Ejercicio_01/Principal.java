@@ -1,5 +1,5 @@
 //Librerias para ingresar datos desde teclado
-import java.util.Scanner; 
+import java.util.Scanner;
 
 //Clase principal
 public class Principal{
@@ -10,32 +10,46 @@ public class Principal{
     
         char[] letras = new char[20]; //Crea un arreglo de 20 espacios
         int tam = letras.length; //Tamaño del arreglo
-        int opcion = 0;
+        int opcion, manera = 0;
 
-        Utilerias.menu();
+        Utilerias.menuPrincipal();
 
         do {
-            
             System.out.println("\nQue algoritmo quieres usar: ");
             opcion = scanner.nextInt();
-            System.out.println("\n\n");
-
 
             switch(opcion) {
 
                 case 1:
-                    Utilerias.LLenadoArray(letras); //Llena el arreglo
 
-                    System.out.println("\nArreglo desordenado: ");
-                    Utilerias.PrintArray(letras, tam);
-                    System.out.println("\n");
+                    Utilerias.formaDeLlenar();
+                    manera = scanner.nextInt();
                     
-                    CountingSort.countingSort(letras);
+                    if (manera == 1) {
 
-                    System.out.println("\nArreglo ordenado: ");
-                    Utilerias.PrintArray(letras, tam);//Imprime el arreglo
-                    System.out.println("\n");
+                        Utilerias.LLenarArrayManual(letras, tam);
 
+                        System.out.println("\nArreglo desordenado: ");
+                        Utilerias.PrintArray(letras, tam);
+                        
+                        CountingSort.countingSort(letras, tam);
+
+                        System.out.println("\nArreglo ordenado: ");
+                        Utilerias.PrintArray(letras, tam);
+
+                    } else{
+
+                        Utilerias.LLenarArrayAleatorio(letras);
+
+                        System.out.println("\nArreglo desordenado: ");
+                        Utilerias.PrintArray(letras, tam);
+                        
+                        CountingSort.countingSort(letras, tam);
+
+                        System.out.println("\nArreglo ordenado: ");
+                        Utilerias.PrintArray(letras, tam);
+                    }
+                    
                     break;
 
                 case 2:
