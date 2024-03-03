@@ -1,4 +1,4 @@
-import java.util.Scanner; //Solo llama a scane
+import java.util.Scanner;
 
 public class Utilerias {
 
@@ -19,6 +19,16 @@ public class Utilerias {
             System.out.println("Letra # " + (i + 1) + ": ");
             letras [i] = scanner.nextLine().charAt(0);
         }
+    }
+
+    //Menu del programa Principal
+    public static void menu() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\n\n--------------Programa de ordenamiento--------------");
+        System.out.println("\n    Que algoritmo de ordenamiento quieres probar    ");
+        System.out.println("\nCounting Sort -------- 1");
+        System.out.println("Radix Sort ------------ 2");
     }
 
 }
