@@ -15,10 +15,12 @@ public class Principal{
 
         System.out.println("\nArreglo desordenado: ");
         Utilerias.PrintArray(letras, tam);
+        System.out.println("\n");
         
         CountingSort.countingSort(letras);
 
         System.out.println("\nArreglo ordenado: ");
         Utilerias.PrintArray(letras, tam);//Imprime el arreglo
+        System.out.println("\n");
     }
 }

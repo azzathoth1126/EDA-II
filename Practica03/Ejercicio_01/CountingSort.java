@@ -15,19 +15,27 @@ public class CountingSort {
             for (int j = 0; j < tam; j++) {
                 if (letras[j] == a) count[i]++;
             }
-            System.out.prinln("Contador en " + a + " es: " + count[i]);
+            System.out.println("Cantidad de elementos " + a + " es: " + count[i]);
             a++; // Incrementamos 'a' para pasar al siguiente carácter en la siguiente iteración del bucle externo
 }
 
         // Calcular las posiciones finales de cada letra en el arreglo ordenado
+        System.out.println("\n"); a = 'a';
+        System.out.println("Posiciones de " + a + " es: " + count[0]);
         for (int i = 1; i < 10; i++) {
+            a += 1;
             count[i] += count[i - 1];
+            System.out.println("Posiciones de " + a + " es: " + count[i]);
+            
         }
 
         // Construir el arreglo ordenado
+        System.out.println("\n");
         for (int i = tam - 1; i >= 0; i--) {
             letras2[count[letras[i] - 'a'] - 1] = letras[i];
             count[letras[i] - 'a']--;
+            System.out.println("Acomodo de arreglo auxiliar: ");
+            Utilerias.PrintArray(letras2,tam);
         }
 
         // Copiar el arreglo ordenado al arreglo original
