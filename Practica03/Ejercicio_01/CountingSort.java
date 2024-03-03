@@ -7,11 +7,6 @@ public class CountingSort {
         // Inicializa el arreglo del conteo
         int[] count = new int[10]; // 10 por que el rango es de 'a' a 'j'
 
-        // Contar la frecuencia de cada letra
-        /*for (int i = 0; i < tam; i++) {
-            count[letras[i] - 'a']++;
-        }*/
-
         int n = count.length;
         char a = 'a'; // Inicializamos 'a' con el carácter 'a'
 
@@ -40,3 +35,9 @@ public class CountingSort {
         }
     }
 }
+
+
+// Contar la frecuencia de cada letra
+        /*for (int i = 0; i < tam; i++) {
+            count[letras[i] - 'a']++;
+        }*/
