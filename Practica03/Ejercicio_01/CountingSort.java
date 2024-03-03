@@ -15,6 +15,7 @@ public class CountingSort {
             for (int j = 0; j < tam; j++) {
                 if (letras[j] == a) count[i]++;
             }
+            System.out.prinln("Contador en " + a + " es: " + count[i]);
             a++; // Incrementamos 'a' para pasar al siguiente carácter en la siguiente iteración del bucle externo
 }
 
