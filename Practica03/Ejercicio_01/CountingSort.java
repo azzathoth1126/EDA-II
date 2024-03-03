@@ -1,6 +1,6 @@
 public class CountingSort {
 
-    public static void countingSort (char[] letras) {
+    public static void countingSort(char[] letras) {
         int tam = letras.length;//Tamaño del arreglo
         char[] letras2 = new char[tam];//Arrelgo auxliar
 

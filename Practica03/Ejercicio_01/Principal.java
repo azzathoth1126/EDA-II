@@ -13,7 +13,7 @@ public class Principal{
 
         Utilerias.LLenadoArray(letras); //Llena el arreglo
 
-    System.out.println("\nArreglo desordenado: ");
+        System.out.println("\nArreglo desordenado: ");
         Utilerias.PrintArray(letras, tam);
         
         CountingSort.countingSort(letras);
