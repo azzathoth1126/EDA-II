@@ -1,15 +1,15 @@
 public class CountingSort {
 
-    public static void countingSort (char[] arr) {
-        int n = arr.length;//Tamaño del arreglo
-        char[] output = new char[n];//Arrelgo auxliar
+    public static void countingSort (char[] letras) {
+        int tam = letras.length;//Tamaño del arreglo
+        char[] letras2 = new char[tam];//Arrelgo auxliar
 
         // Inicializa el arreglo del conteo
         int[] count = new int[10]; // 10 por que el rango es de 'a' a 'j'
 
         // Contar la frecuencia de cada letra
-        for (int i = 0; i < n; i++) {
-            count[arr[i] - 'a']++;
+        for (int i = 0; i < tam; i++) {
+            count[letras[i] - 'a']++;
         }
 
         // Calcular las posiciones finales de cada letra en el arreglo ordenado
@@ -18,14 +18,14 @@ public class CountingSort {
         }
 
         // Construir el arreglo ordenado
-        for (int i = n - 1; i >= 0; i--) {
-            output[count[arr[i] - 'a'] - 1] = arr[i];
-            count[arr[i] - 'a']--;
+        for (int i = tam - 1; i >= 0; i--) {
+            letras2[count[letras[i] - 'a'] - 1] = letras[i];
+            count[letras[i] - 'a']--;
         }
 
         // Copiar el arreglo ordenado al arreglo original
-        for (int i = 0; i < n; i++) {
-            arr[i] = output[i];
+        for (int i = 0; i < tam; i++) {
+            letras[i] = letras2[i];
         }
     }
 }
