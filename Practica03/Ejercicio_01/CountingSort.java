@@ -8,9 +8,20 @@ public class CountingSort {
         int[] count = new int[10]; // 10 por que el rango es de 'a' a 'j'
 
         // Contar la frecuencia de cada letra
-        for (int i = 0; i < tam; i++) {
+        /*for (int i = 0; i < tam; i++) {
             count[letras[i] - 'a']++;
-        }
+        }*/
+
+        int n = count.length;
+        char a = 'a'; // Inicializamos 'a' con el carácter 'a'
+
+        for (int i = 0; i < n; i++) {
+            count[i] = 0; // Inicializamos el contador en cero para cada elemento del arreglo "count"
+            for (int j = 0; j < tam; j++) {
+                if (letras[j] == a) count[i]++;
+            }
+            a++; // Incrementamos 'a' para pasar al siguiente carácter en la siguiente iteración del bucle externo
+}
 
         // Calcular las posiciones finales de cada letra en el arreglo ordenado
         for (int i = 1; i < 10; i++) {
