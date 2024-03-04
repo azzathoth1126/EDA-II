@@ -61,10 +61,25 @@ public class Principal{
                     Utilerias.formaDeLlenar();
                     manera = scanner.nextInt();
 
-                    System.out.println("\nArreglo desordenado: ");
-                    Utilerias.PrintArrays(numeros, tam);
+                    if (manera == 1) {
 
-                    RadixSort.radixSort(numeros, tam);
+                        Utilerias.LlenarArrayManual(numeros, tam);
+
+                        System.out.println("\nArreglo desordenado: ");
+                        Utilerias.PrintArrays(numeros, tam);
+
+                        RadixSort.radixSort(numeros, tam);
+                        
+
+                    } else{
+
+                        Utilerias.LlenarArrayAleatorio(numeros, tam);
+
+                        System.out.println("\nArreglo desordenado: ");
+                        Utilerias.PrintArrays(numeros, tam);
+
+                        
+                    }
                     break;
 
                 default:

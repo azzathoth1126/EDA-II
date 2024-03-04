@@ -61,7 +61,7 @@ public class Utilerias {
             StringBuilder numeroAleatorio = new StringBuilder();
 
             for (int j = 0; j < 4; j++) {
-                int digito = random.nextInt(4) + 3 + 1;
+                int digito = random.nextInt(4) + 3;
                 numeroAleatorio.append(digito);
             }
             numeros[i] = Integer.parseInt(numeroAleatorio.toString());
