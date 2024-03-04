@@ -7,9 +7,7 @@ public class Utilerias {
     //Imprime el Arreglo
     public static void PrintArray(char letras[], int tam) {
 
-        for (int i = 0; i < tam; ++i) {
-            System.out.print(letras[i] + " ");
-        }
+        for (int i = 0; i < tam; ++i) System.out.print(letras[i] + " ");
         System.out.println("\n");
     }
 
@@ -39,19 +37,18 @@ public class Utilerias {
 
     //Menu del programa Principal
     public static void menuPrincipal() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("\n\n--------------Programa de ordenamiento--------------");
         System.out.println("\n    Que algoritmo de ordenamiento quieres probar    ");
-        System.out.println("\nCounting Sort --------- 1");
+        System.out.println("\nCounting Sort ----------- 1");
         System.out.println("Radix Sort -------------- 2");
     }
 
     public static void formaDeLlenar(){
-        System.out.println("\nComo quieres llenar el arreglo: ");
-        System.out.println("Manual -------- 1");
+        System.out.println("\nFormas de llenar el arreglo : ");
+        System.out.println("\nManual -------- 1");
         System.out.println("Aleatoria ----- 2");
 
+        System.out.println("\nComo lo quieres llenar: ");
     }
 
 }

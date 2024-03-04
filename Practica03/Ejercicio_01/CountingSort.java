@@ -46,6 +46,7 @@ public class CountingSort {
 
 
 // Contar la frecuencia de cada letra
+//Estudiar para comprenderlo
         /*for (int i = 0; i < tam; i++) {
             count[letras[i] - 'a']++;
         }*/
