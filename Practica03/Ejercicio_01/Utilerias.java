@@ -4,25 +4,32 @@ import java.util.Random;
 public class Utilerias {
 
 
-    //Imprime el Arreglo
+    //Imprime el Arreglo para Counting Sort
     public static void PrintArray(char letras[], int tam) {
 
         for (int i = 0; i < tam; ++i) System.out.print(letras[i] + " ");
         System.out.println("\n");
     }
 
-    //LLena el arreglo de forma manual por el usuario
+    //Imprime el Arreglo para Radix Sort
+    public static void PrintArrays(int numeros[], int tam) {
+
+        for (int i = 0; i < tam; ++i) System.out.print(numeros[i] + " ");
+        System.out.println("\n");
+    }
+
+    //LLena el arreglo de forma manual para Counting Sort
     public static void LLenarArrayManual(char letras[], int tam) {
         Scanner scanner = new Scanner(System.in);//Para llamar al metodo nextLine de scanner
         System.out.println("Dame las letras del arreglo");
 
         for (int i = 0; i < tam; i++){
             System.out.println("Letra # " + (i + 1) + ": ");
-            letras [i] = scanner.nextLine().charAt(0);
+            letras[i] = scanner.nextLine().charAt(0);
         }
     }
 
-    //Llena el arreglo de manera aleatoria
+    //LLena el arreglo de forma aleatoria para Counting Sort
     public static void LLenarArrayAleatorio(char letras[]) {
         Random rand = new Random();
 
@@ -33,6 +40,32 @@ public class Utilerias {
         }
 
 
+    }
+
+    //LLena el arreglo de forma manual para Radix Sort
+    public static void LlenarArrayManual(int numeros[], int tam) {
+        Scanner scanner = new Scanner(System.in);//Para llamar al metodo nextLine de scanner
+        System.out.println("Dame los elemenos del arreglo");
+
+        for (int i = 0; i < tam; i++){
+            System.out.println("Elemento # " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        }
+    }
+
+    //LLena el arreglo de forma manual para Radix Sort
+    public static void LlenarArrayAleatorio(int numeros[], int tam) {
+        Random random = new Random();
+        
+        for (int i = 0; i < tam; i++) {
+            StringBuilder numeroAleatorio = new StringBuilder();
+
+            for (int j = 0; j < 4; j++) {
+                int digito = random.nextInt(4) + 3 + 1;
+                numeroAleatorio.append(digito);
+            }
+            numeros[i] = Integer.parseInt(numeroAleatorio.toString());
+        }
     }
 
     //Menu del programa Principal

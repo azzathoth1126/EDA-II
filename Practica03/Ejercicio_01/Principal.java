@@ -8,9 +8,7 @@ public class Principal{
 
         Scanner scanner = new Scanner(System.in); //Crea un objeto para ingresar datos desde el teclado
     
-        char[] letras = new char[20]; //Crea un arreglo de 20 espacios
-        int tam = letras.length; //Tamaño del arreglo
-        int opcion, manera = 0;
+        int opcion, manera = 0, tam;
 
         Utilerias.menuPrincipal();
 
@@ -21,6 +19,9 @@ public class Principal{
             switch(opcion) {
 
                 case 1:
+
+                    char[] letras = new char[20]; //Crea un arreglo de 20 espacios
+                    tam = letras.length; //Tamaño del arreglo
 
                     Utilerias.formaDeLlenar();
                     manera = scanner.nextInt();
@@ -54,7 +55,16 @@ public class Principal{
 
                 case 2:
 
-                    RadixSort.radixSort();
+                    int[] numeros = new int[15]; //Crea un arreglo de 20 espacios
+                    tam = numeros.length; //Tamaño del arreglo
+
+                    Utilerias.formaDeLlenar();
+                    manera = scanner.nextInt();
+
+                    System.out.println("\nArreglo desordenado: ");
+                    Utilerias.PrintArrays(numeros, tam);
+
+                    RadixSort.radixSort(numeros, tam);
                     break;
 
                 default:
