@@ -6,7 +6,7 @@ public class RadixSort {
 
     public static void radixSort(int numeros[], int tam) {
         Stack<Integer>[] digitStacks = new Stack[4];
-        int exp = 1;
+        int exp = 1, tamm = tam;
         int[] auxiliar = new int[15];
 
         for (int i = 0; i < 4; i++) {
@@ -42,12 +42,12 @@ public class RadixSort {
         }
 
         for (int nu = 0; nu < tam; nu++) {
-            auxiliar[nu] = numeros[--tam];
+            auxiliar[nu] = numeros[tamm-1];
+            tamm--;
         }
 
         for (int nu = 0; nu < tam; nu++) {
             numeros[nu] = auxiliar[nu];
         }
-    
     }
 }
