@@ -5,8 +5,9 @@ import java.util.Random;
 public class RadixSort {
 
     public static void radixSort(int numeros[], int tam) {
-        Stack<Integer>[] digitStacks = new Stack[15];
+        Stack<Integer>[] digitStacks = new Stack[4];
         int exp = 1;
+        int[] auxiliar = new int[15];
 
         for (int i = 0; i < 4; i++) {
             digitStacks[i] = new Stack<>();
@@ -37,6 +38,16 @@ public class RadixSort {
             System.out.println("\nArreglo modificado: ");
             Utilerias.PrintArrays(numeros, tam);
             exp = exp*10;
+
         }
+
+        for (int nu = 0; nu < tam; nu++) {
+            auxiliar[nu] = numeros[tam];
+        }
+
+        for (int nu = 0; nu < tam; nu++) {
+            numeros[nu] = auxiliar[nu];
+        }
+    
     }
 }
