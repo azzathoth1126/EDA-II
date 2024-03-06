@@ -42,7 +42,7 @@ public class RadixSort {
         }
 
         for (int nu = 0; nu < tam; nu++) {
-            auxiliar[nu] = numeros[tam];
+            auxiliar[nu] = numeros[--tam];
         }
 
         for (int nu = 0; nu < tam; nu++) {
