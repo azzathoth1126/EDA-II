@@ -10,8 +10,10 @@ public class RadixSort {
 
         for (int i = 0; i < 4; i++) {
             digitStacks[i] = new Stack<>();
-            System.out.println("Pila "+ i + " " + digitStacks[i] + "\n");
+            System.out.println("Pila "+ i + " " + digitStacks[i] + "");
         }
+
+        System.out.println("\n");
 
         for (int j=0; j<4; j++) {
             // Coloca los elementos en las pilas según el dígito actual
@@ -22,8 +24,9 @@ public class RadixSort {
 
             for(int i=0; i<4; i++) System.out.println("Pila "+ i + " con elementos: " + digitStacks[i]);
             
+            int index = 15;
             for (Stack<Integer> stack : digitStacks) {
-                int index = 15;
+                
                 if (stack != null) { // Verifica si la pila está inicializada
                     while (!stack.isEmpty()) {
                         numeros[--index] = stack.pop();
