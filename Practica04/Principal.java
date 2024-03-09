@@ -44,13 +44,21 @@ public class Principal {
         imprimirLista(lista2);
         System.out.println("\n *** ");
         imprimirLista(lista3);
-        System.out.println(lista1.equals(lista2));        
+        System.out.println(lista1.equals(lista2));  
+
+        int tam = lista1.size();
+        System.out.println("\nTamaño de la lista: " + tam);
+
+        imprimirLista(lista1);
 
         System.out.println("\nBuscando el elemento " + elemSearch + " :");
-        BusquedaLineal.VerFal(lista1, elemSearch);
-        BusquedaLineal.Indices(lista1, elemSearch);
-        BusquedaLineal.Repetidos(lista1, elemSearch);
+        BusquedaLineal.Contiene(lista1, elemSearch);
+        BusquedaLineal.Posicion(lista1, elemSearch,tam);
+        BusquedaLineal.Repetido(lista1, elemSearch);
 
+        
+        System.out.println("\nSe encuenta " + elemSearch + " en la lista: ");
+        System.out.println(BusquedaBinaria.busqueda(lista1, elemSearch, tam-1, 0));
     }
 
     public static void imprimirLista(List<Integer> listaPrint){
