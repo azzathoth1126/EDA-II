@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,8 +58,12 @@ public class Principal {
         BusquedaLineal.Repetido(lista1, elemSearch);
 
         
+        Collections.sort(lista1);
+
+        imprimirLista(lista1);
+        
         System.out.println("\nSe encuenta " + elemSearch + " en la lista: ");
-        System.out.println(BusquedaBinaria.busqueda(lista1, elemSearch, tam-1, 0));
+        System.out.println(BusquedaBinaria.busqueda(lista1, elemSearch, 0, tam-1));
     }
 
     public static void imprimirLista(List<Integer> listaPrint){

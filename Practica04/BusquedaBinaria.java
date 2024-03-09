@@ -3,19 +3,26 @@ import java.util.List;
 
 public class BusquedaBinaria {
 
-    public static boolean busqueda(List<Integer> lista, int elemSearch, int fin, int inicio) {
-
+    public static boolean busqueda(List<Integer> lista, int elemSearch, int inicio, int fin) {
         if (inicio <= fin) {
 
             int mid = ((fin + inicio) / 2);
+            System.out.println("Inicio: " + inicio + " Fin: "+ fin + " Pivote: " + mid);
             
-            if(lista.get(mid) == elemSearch) return true;
+            if(elemSearch == lista.get(mid)) {
+                System.out.println("Se encontro");
+                return true;
+            }
 
-            if(lista.get(mid) < elemSearch) busqueda(lista, elemSearch, mid-1, 0);
+            if(elemSearch > lista.get(mid)) {
+                busqueda(lista, elemSearch, mid + 1, fin);
+            }
 
-            if(lista.get(mid) > elemSearch) busqueda(lista, elemSearch, fin, mid+1);
+            if(elemSearch < lista.get(mid)) {
+                busqueda(lista, elemSearch, inicio, mid - 1); 
+            }   
+
+            return false       
         }
-
-        return false;
     }
 }
