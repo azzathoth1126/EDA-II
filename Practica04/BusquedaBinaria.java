@@ -3,15 +3,14 @@ import java.util.List;
 
 public class BusquedaBinaria {
 
-    public static boolean busqueda(List<Integer> lista, int elemSearch, int inicio, int fin) {
+    public static void busqueda(List<Integer> lista, int elemSearch, int inicio, int fin) {
         if (inicio <= fin) {
 
             int mid = ((fin + inicio) / 2);
-            System.out.println("Inicio: " + inicio + " Fin: "+ fin + " Pivote: " + mid);
+            //System.out.println("Inicio: " + inicio + " Fin: "+ fin + " Pivote: " + mid);
             
             if(elemSearch == lista.get(mid)) {
-                System.out.println("Se encontro");
-                return true;
+                System.out.println("Elemento encontrado");
             }
 
             if(elemSearch > lista.get(mid)) {
@@ -21,8 +20,8 @@ public class BusquedaBinaria {
             if(elemSearch < lista.get(mid)) {
                 busqueda(lista, elemSearch, inicio, mid - 1); 
             }   
-
-            return false       
+        } else{
+            System.out.println("El elemento no se encuentra");
         }
     }
 }
