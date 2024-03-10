@@ -85,6 +85,7 @@ public class Principal {
 
         //Busqueda secuencial
         System.out.println("\n Busqueda Lineal o Secuencial");
+
         System.out.println("\nBuscando el elemento " + elemSearch + " :");
         BusquedaLineal.Contiene(lista1, elemSearch);
         BusquedaLineal.Posicion(lista1, elemSearch,tam);
@@ -95,11 +96,22 @@ public class Principal {
         System.out.println("\n Lista 1 ordenada");
         imprimirLista(lista1);
         System.out.println("\n *** ");
-        
+
         //Busqueda Binaria
         System.out.println("\n Busqueda Binaria");
+
         System.out.println("\nSe encuenta " + elemSearch + " en la lista: ");
         BusquedaBinaria.busqueda(lista1, elemSearch, 0, tam-1);
+
+        //Agregando elemento repetido
+        lista1.add(7, 26);
+        Collections.sort(lista1);
+        System.out.println("\n Lista 1 ordenada");
+        imprimirLista(lista1);
+        System.out.println("\n *** ");
+
+        tam = lista1.size();
+        BusquedaBinaria.busquedaRepetida(lista1, elemSearch, 0, tam);
     }
 
     public static void imprimirLista(List<Integer> listaPrint){
