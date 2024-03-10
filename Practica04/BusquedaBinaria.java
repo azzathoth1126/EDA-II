@@ -10,7 +10,7 @@ public class BusquedaBinaria {
             //System.out.println("Inicio: " + inicio + " Fin: "+ fin + " Pivote: " + mid);
             
             if(elemSearch == lista.get(mid)) {
-                System.out.println("Elemento encontrado");
+                System.out.println("Elemento encontrado\n");
             }
 
             if(elemSearch > lista.get(mid)) {
