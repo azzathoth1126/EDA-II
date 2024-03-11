@@ -32,17 +32,8 @@ public class BusquedaBinaria {
             int mid = ((fin + inicio) / 2);
             //System.out.println("Inicio: " + inicio + " Fin: "+ fin + " Pivote: " + mid);
             
-            if(elemSearch == lista.get(mid)) {
-                index++;
-                
-                while(elemSearch == lista.get(mid-1)) index++;
-                
-                mid = ((fin + inicio) / 2);
-                    
-                while(elemSearch == lista.get(mid+1)) index++;
-                
-                System.out.println("Elemento repetido " + index + " veces.");
-            }
+            if(elemSearch == lista.get(mid)) searchrRepetida(lista, elemSearch, mid);
+            
             if(elemSearch > lista.get(mid)) busqueda(lista, elemSearch, mid + 1, fin);
 
             if(elemSearch < lista.get(mid)) busqueda(lista, elemSearch, inicio, mid - 1);
@@ -50,5 +41,25 @@ public class BusquedaBinaria {
         } else{
             System.out.println("El elemento no se encuentra");
         }
+    }
+
+    public static void searchrRepetida(List<Integer> lista, int elemSearch, int mid) {
+
+        int pivote = mid;
+        int repeticiones = 1;
+
+        pivote--;
+        while (elemSearch == lista.get(pivote)) {
+            pivote--;
+            repeticiones++;
+        }
+
+        pivote = mid + 1;
+        while (elemSearch == lista.get(pivote)) {
+            pivote++;
+            repeticiones++;
+        } 
+
+        System.out.println("Hay "+ repeticiones + " veces el elemento " + elemSearch);
     }
 }

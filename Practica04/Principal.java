@@ -10,7 +10,6 @@ public class Principal {
         int elemSearch = 26;
 
         //Comprobando si la lista esta vacia
- 
         System.out.println("\nCuantos elementos tiene la lista: " + lista1.size());
         System.out.println("La lista esta vacia: " + lista1.isEmpty());
 
@@ -104,7 +103,8 @@ public class Principal {
         BusquedaBinaria.busqueda(lista1, elemSearch, 0, tam-1);
 
         //Agregando elemento repetido
-        lista1.add(7, 26);
+        //lista1.add(7, 26);
+        //lista1.add(5, 26);
         Collections.sort(lista1);
         System.out.println("\n Lista 1 ordenada");
         imprimirLista(lista1);
@@ -122,21 +122,3 @@ public class Principal {
     }
 
 }
-
-
-//add agrega un elemento en la lista en la posición que quieras
-//set cambia un elemento de la lista en la posción que eliges
-
-//          Elementos del metodo imprimirLista
-//          System.out.println(var);
-//          i++;
-
-
-/**
-        System.out.println("\nImprimiendo lista 1");
-        imprimirLista(lista1);
-        System.out.println("\nImprimiendo lista 2");
-        imprimirLista(lista2);
-        System.out.println("\nImprimiendo lista 3");
-        imprimirLista(lista3);
- */
