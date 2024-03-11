@@ -13,7 +13,7 @@ public class BusquedaLineal {
             }
         }
 
-        if (indicador == 1) {
+        if (indicador != 0) {
             System.out.println("True");
         } else {
             System.out.println("False");
