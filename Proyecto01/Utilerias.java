@@ -22,35 +22,35 @@ public class Utilerias {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Seleccionaste la opción 1");
+                    //System.out.println("Seleccionaste la opción 1");
                     return 50;
 
                 case 2:
-                    System.out.println("Seleccionaste la opción 2");
+                    //System.out.println("Seleccionaste la opción 2");
                     return 100;
 
                 case 3:
-                    System.out.println("Seleccionaste la opción 3");
+                    //System.out.println("Seleccionaste la opción 3");
                     return 500;
 
                 case 4:
-                    System.out.println("Seleccionaste la opción 4");
+                    //System.out.println("Seleccionaste la opción 4");
                     return 800;
 
                 case 5:
-                    System.out.println("Seleccionaste la opción 5");
+                    //System.out.println("Seleccionaste la opción 5");
                     return 1000;
 
                 case 6:
-                    System.out.println("Seleccionaste la opción 6");
+                    //System.out.println("Seleccionaste la opción 6");
                     return 2000;
 
                 case 7:
-                    System.out.println("Seleccionaste la opción 7");
+                    //System.out.println("Seleccionaste la opción 7");
                     return 5000;
 
                 case 8:
-                    System.out.println("Seleccionaste la opción 8");
+                    //System.out.println("Seleccionaste la opción 8");
                     return 10000;
 
                 default:

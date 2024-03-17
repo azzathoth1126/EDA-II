@@ -13,7 +13,7 @@ public class Principal {
         //Tamaño arreglo
         int tamArreglo = Utilerias.tamArray();
 
-        System.out.println(tamArreglo);
+        System.out.println("\nTamaño: " + tamArreglo);
 
         //Creando arreglos de tamaño n
         int[] arreglo01 = new int[tamArreglo];
