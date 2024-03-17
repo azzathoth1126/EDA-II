@@ -3,14 +3,10 @@ import java.util.Scanner;
 
 public class Utilerias {
 
-    public static void menus(){
+    public static int tamArray() {
+
         Scanner scanner = new Scanner(System.in);
         int opcion;
-
-        System.out.println("\n***********  Proyecto 01 ***********");
-        System.out.println("\n");
-        System.out.println("Analisis de complejidad de algoritmos");
-        System.out.println("\nDe que tamaño de arreglos quieres analizar la complejidad");
 
         do {
             System.out.println("\n\t1)...... 50");
@@ -27,44 +23,45 @@ public class Utilerias {
             switch (opcion) {
                 case 1:
                     System.out.println("Seleccionaste la opción 1");
+                    return 50;
 
-                    break;
                 case 2:
                     System.out.println("Seleccionaste la opción 2");
+                    return 100;
 
-                    break;
                 case 3:
                     System.out.println("Seleccionaste la opción 3");
+                    return 500;
 
-                    break;
                 case 4:
                     System.out.println("Seleccionaste la opción 4");
+                    return 800;
 
-                    break;
                 case 5:
                     System.out.println("Seleccionaste la opción 5");
+                    return 1000;
 
-                    break;
                 case 6:
                     System.out.println("Seleccionaste la opción 6");
+                    return 2000;
 
-                    break;
                 case 7:
                     System.out.println("Seleccionaste la opción 7");
+                    return 5000;
 
-                    break;
                 case 8:
                     System.out.println("Seleccionaste la opción 8");
+                    return 10000;
 
-                    break;
                 default:
                     System.out.println("\nOpción inválida. Por favor, ingrese un número entre 1 y 8.");
             }
+
         } while (opcion < 1 || opcion > 8);
         
-        scanner.close();
-
+        return 0;
     }
+
 
     public static void llenarArray(int arreglo[]) {
         Random rand = new Random();
@@ -75,13 +72,6 @@ public class Utilerias {
         }
     }
 
-    public static void imprimirArray(int arreglo[]){
-        int tam = arreglo.length;
-
-        for(int i=0; i<tam; i++){
-            System.out.println("Elemento "+ (i+1) + " :" +arreglo[i]);
-        }
-    }
 
     public static void duplicarArrays(int arreglo01[], int arreglo02[]){
         int tam = arreglo01.length;
@@ -91,10 +81,19 @@ public class Utilerias {
         }
     }
 
+
+    public static void imprimirArray(int arreglo[]){
+        int tam = arreglo.length;
+
+        for(int i=0; i<tam; i++){
+            System.out.println("Elemento "+ (i+1) + " :" +arreglo[i]);
+        }
+    }
+
+
     public static void intercambiar(int[] arr, int x, int y) {
         int temp = arr[x];   
         arr[x] = arr[y];  
         arr[y] = temp;
     }
-
 }
