@@ -6,6 +6,7 @@ public class Principal{
 
     public static void main(String []args) {
 
+        //Variable mp que se inicializa con una instancia de HashMap<String, Integer>.
         Map<String,Integer> mp = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
 
@@ -17,18 +18,16 @@ public class Principal{
         mp.put("Alexis", 22);
         mp.put("Maria", 43); 
         mp.put("Armando", 10);
-        mp.put("Danai", 20);
-        mp.put("Kaori", 30);      
+        mp.put("Luz", 20);
+        mp.put("Erina", 30);      
 
         System.out.println("\nElementos Agregados");  
 
+        //Numeros de elementos en la tabla Hash
         System.out.println("\nCuanto elementos contiene la tabla: " + mp.size());
 
-        System.out.println("\nTabla Hash: ");
-        for(Map.Entry<String,Integer>entry : mp.entrySet()){
-            System.out.println("Nombre: " + entry.getKey() + ", Altura: " + entry.getValue());
-
-        }
+        //Imprimiendo elementos de la tabla Hash
+        imprimir(mp);
 
         //containKey() Busca en la tabla si existe dicho DATO o NOMBRE o LLAVE
         System.out.println("\nExiste Alexis en la tabla: " + mp.containsKey("Alexis"));
@@ -40,14 +39,16 @@ public class Principal{
 
     }
 
+
+    public static void imprimir(Map<String,Integer> elemento) {
+        System.out.println("\nTabla Hash: ");
+        for(Map.Entry<String,Integer>entry : elemento.entrySet()){
+            System.out.println("Nombre: " + entry.getKey() + ", Altura: " + entry.getValue());
+        }
+    }
+
 }
 
-/* 
-    .put(key, value) Ingresa los datos en la tabla
-    .size() Devuelve el numero de datos en la tabla
-    .containKey() Devuelve true si dicha llave (Key) esta en la tabla, en caso contrario devuelve false
-    .containValue() Devuelve true si dicho valor (Value) esta en la tabla, en caso contrario devuelve false
-*/ 
 
 /* 
         mp.put(3, p); // Añadimos un objeto persona al map
