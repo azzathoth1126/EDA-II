@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Grafo {
-    
+
     public static void main(String[] args) {
        
         List<List<Integer>> graph = new ArrayList<>();
@@ -15,10 +15,15 @@ public class Grafo {
         addVertex(graph); // vértice 0
         addVertex(graph); // vértice 1
         addVertex(graph); // vértice 2
+        addVertex(graph); // vértice 3
+        addVertex(graph);
 
        
         addEdge(graph, 0, 1);
         addEdge(graph, 1, 2);
+        //addEdge(graph, 2, 3);
+        //addEdge(graph, 1, 3);
+
 
         // Imprimir los vértices y las aristas
         System.out.println("Vértices: " + getVertices(graph));
@@ -41,6 +46,7 @@ public class Grafo {
         List<Integer> vertices = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             vertices.add(i);
+            System.out.println("Arista" + i);
         }
         return vertices;
     }
