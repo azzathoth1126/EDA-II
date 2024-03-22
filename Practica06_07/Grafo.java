@@ -15,14 +15,16 @@ public class Grafo {
         addVertex(graph); // vértice 0
         addVertex(graph); // vértice 1
         addVertex(graph); // vértice 2
+        //Añadido en clase
         addVertex(graph); // vértice 3
         addVertex(graph);
 
        
         addEdge(graph, 0, 1);
         addEdge(graph, 1, 2);
-        //addEdge(graph, 2, 3);
-        //addEdge(graph, 1, 3);
+        //Añadido en clase
+        addEdge(graph, 2, 3);
+        addEdge(graph, 3, 4);
 
 
         // Imprimir los vértices y las aristas
@@ -38,7 +40,7 @@ public class Grafo {
     // Método para agregar una arista al grafo
     private static void addEdge(List<List<Integer>> graph, int vertex1, int vertex2) {
         graph.get(vertex1).add(vertex2);
-        graph.get(vertex2).add(vertex1);
+        //graph.get(vertex2).add(vertex1);
     }
 
     // Método para obtener los vértices del grafo
@@ -46,7 +48,6 @@ public class Grafo {
         List<Integer> vertices = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             vertices.add(i);
-            System.out.println("Arista" + i);
         }
         return vertices;
     }
