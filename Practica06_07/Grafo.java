@@ -17,7 +17,15 @@ public class Grafo {
         addVertex(graph); // vértice 2
         //Añadido en clase
         addVertex(graph); // vértice 3
+        addVertex(graph); // vértice 4
+        /*
         addVertex(graph);
+        addVertex(graph);
+        addVertex(graph);
+        addVertex(graph);
+        addVertex(graph);
+        addVertex(graph);
+        */
 
        
         addEdge(graph, 0, 1);
@@ -44,7 +52,7 @@ public class Grafo {
     // Método para agregar una arista al grafo
     private static void addEdge(List<List<Integer>> graph, int vertex1, int vertex2) {
         graph.get(vertex1).add(vertex2);
-        //graph.get(vertex2).add(vertex1);
+        graph.get(vertex2).add(vertex1);
     }
 
     // Método para obtener los vértices del grafo

@@ -37,6 +37,9 @@ public class GrafoDir {
         g.addEdge(1, 4);
         g.addEdge(2, 3);
         g.addEdge(3, 4);
+        //Añadido en clase
+        g.addEdge(4, 0);
+
 
 
         g.printGraph();
