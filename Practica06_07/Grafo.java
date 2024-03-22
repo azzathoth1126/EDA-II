@@ -70,9 +70,10 @@ public class Grafo {
         List<String> edges = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             for (int j : graph.get(i)) {
+                System.out.println("Yo " + j);
                 if (!edges.contains(j + "-" + i)) {
                     edges.add(i + "-" + j);
-                    System.out.println(i + "-" + j);
+                    //System.out.println(edges.get(i));
                 }
             }
         }
