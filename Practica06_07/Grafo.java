@@ -30,6 +30,10 @@ public class Grafo {
         // Imprimir los vértices y las aristas
         System.out.println("Vértices: " + getVertices(graph));
         System.out.println("Aristas: " + getEdges(graph));
+
+
+        //System.out.println(graph.get(2));
+        //System.out.println(graph.get(3));
     }
 
     // Método para agregar un vértice al grafo
@@ -48,6 +52,7 @@ public class Grafo {
         List<Integer> vertices = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             vertices.add(i);
+            //System.out.println(vertices.get(i));
         }
         return vertices;
     }
@@ -59,6 +64,7 @@ public class Grafo {
             for (int j : graph.get(i)) {
                 if (!edges.contains(j + "-" + i)) {
                     edges.add(i + "-" + j);
+                    System.out.println(i + "-" + j);
                 }
             }
         }
