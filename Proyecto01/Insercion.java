@@ -13,11 +13,9 @@ public class Insercion{
                 comparaciones++; // Incremento por cada comparación de elementos del arreglo
                 array[i + 1] = array[i];  
                 cambios++; // Incremento por cada cambio de elementos
-                inserciones++; // Incremento por cada cambio o inserción de un elemento del arreglo
                 i--;  
             }  
             array[i + 1] = key;
-            inserciones++; // Incremento por cada inserción realizada
         }  
 
         System.out.println("Accesos al arreglo: " + accesosArreglo);

@@ -16,7 +16,6 @@ public class Seleccion {
             }  
             Utilerias.intercambiar(arr, i, min);
             cambios++;
-            inserciones++;
         }
 
         System.out.println("Accesos al arreglo: " + accesosArreglo);
