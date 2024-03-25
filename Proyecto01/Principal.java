@@ -18,8 +18,8 @@ public class Principal {
         //Creando arreglos de tamaño n
         int[] arreglo01 = new int[tamArreglo];
         int[] arreglo02 = new int[tamArreglo];
-        /*
         int[] arreglo03 = new int[tamArreglo];
+        /*
         int[] arreglo04 = new int[tamArreglo];
         int[] arreglo05 = new int[tamArreglo];
         */
@@ -27,18 +27,21 @@ public class Principal {
         //Llenando arreglos
         Utilerias.llenarArray(arreglo01);
         Utilerias.duplicarArrays(arreglo01, arreglo02);
-        /*
         Utilerias.duplicarArrays(arreglo01, arreglo03);
+        /*
         Utilerias.duplicarArrays(arreglo01, arreglo04);
         Utilerias.duplicarArrays(arreglo01, arreglo05);
         */
 
         //Ordenando arreglos
-        System.out.println("\nInsertion Sort");
+        System.out.println("\nInsertion Sort:");
         Insercion.insertionSort(arreglo01);
 
-        System.out.println("\nSelection Sort");
+        System.out.println("\nSelection Sort:");
         Seleccion.selectionSort(arreglo02);
+
+        System.out.println("\nBubble Sort:");
+        BubbleSort.bubbleSort(arreglo03);
         
     }
 
