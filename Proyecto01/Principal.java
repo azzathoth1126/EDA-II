@@ -22,6 +22,7 @@ public class Principal {
         /*
         int[] arreglo04 = new int[tamArreglo];
         int[] arreglo05 = new int[tamArreglo];
+        int[] arreglo06 = new int[tamArreglo];
         */
 
         //Llenando arreglos
@@ -31,6 +32,7 @@ public class Principal {
         /*
         Utilerias.duplicarArrays(arreglo01, arreglo04);
         Utilerias.duplicarArrays(arreglo01, arreglo05);
+        Utilerias.duplicarArrays(arreglo01, arreglo06);
         */
 
         //Ordenando arreglos
