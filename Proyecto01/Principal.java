@@ -36,14 +36,15 @@ public class Principal {
         */
 
         //Ordenando arreglos
+        System.out.println("\nBubble Sort:");
+        BubbleSort.bubbleSort(arreglo01);
+
         System.out.println("\nInsertion Sort:");
-        Insercion.insertionSort(arreglo01);
+        Insercion.insertionSort(arreglo02);
 
         System.out.println("\nSelection Sort:");
-        Seleccion.selectionSort(arreglo02);
+        Seleccion.selectionSort(arreglo03);
 
-        System.out.println("\nBubble Sort:");
-        BubbleSort.bubbleSort(arreglo03);
         
     }
 
