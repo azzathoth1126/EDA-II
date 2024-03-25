@@ -1,7 +1,7 @@
 public class Insercion{  
 
     public static void insertionSort(int array[]) {  
-        int accesosArreglo = 0, comparaciones = 0, cambios = 0, inserciones = 0;
+        int accesosArreglo = 0, comparaciones = 0, cambios = 0;
 
         int n = array.length;  
         for (int j = 1; j < n; j++) {  
@@ -22,7 +22,6 @@ public class Insercion{
 
         System.out.println("Accesos al arreglo: " + accesosArreglo);
         System.out.println("Comparaciones: " + comparaciones);
-        System.out.println("Cambios: " + cambios);
-        System.out.println("Inserciones: " + inserciones);   
+        System.out.println("Cambios: " + cambios); 
     }
 }

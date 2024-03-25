@@ -1,7 +1,7 @@
 public class BubbleSort{    
     
     static void bubbleSort(int arreglo[]) {
-         int accesosArreglo = 0, comparaciones = 0, cambios = 0, inserciones = 0;
+        int accesosArreglo = 0, comparaciones = 0, cambios = 0;
 
         int n = arreglo.length;
         boolean ver = true;
@@ -27,6 +27,5 @@ public class BubbleSort{
         System.out.println("Accesos al arreglo: " + accesosArreglo);
         System.out.println("Comparaciones: " + comparaciones);
         System.out.println("Cambios: " + cambios);
-        System.out.println("Inserciones: " + inserciones); 
     }
 }
