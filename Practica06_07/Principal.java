@@ -10,15 +10,17 @@ public class Principal{
 
         while (!salir) {
 
-            tipoGrafo();
+            Utilerias.tipoGrafo();
             System.out.println("Opcion: ");
             int opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
+                    Utilerias.grafoNDirigido();
                     System.out.println("Hola");
                     break;
                 case 2:
+                    Utilerias.grafoDirigido();
                     System.out.println("Hola");
                     break;
                 case 3:
@@ -28,16 +30,6 @@ public class Principal{
                     System.out.println("\nOpción no válida. Por favor, seleccione una opción válida.");
             }
         }
-    }
-
-
-    public static void tipoGrafo() {
-
-        System.out.println("   Que tipo de grafo quieres crear ");
-        System.out.println("\n1-----Grafo no dirigido");
-        System.out.println("2-----Grafo dirigido");
-        System.out.println("3-----Salir");
-        System.out.println("");
     }
 
 }
