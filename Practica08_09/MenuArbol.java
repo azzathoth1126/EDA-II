@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 public class MenuArbol{
 
+    /*
+    //Atributo de clase
+    private Scanner scanner;
+
+    //Metodo Scanner
+    public MenuArbol(){
+        this.scanner = new Scanner(System.in);
+    }
+    */
+
     public static void menuTree(){
 
         //MenuArbol  menuArbol = new MenuArbol();
@@ -152,5 +162,11 @@ public class MenuArbol{
         }
 
     }
+
+    /*
+    public static void cerrarScanner(){
+        scanner.close();
+    }
+    */
 
 }
