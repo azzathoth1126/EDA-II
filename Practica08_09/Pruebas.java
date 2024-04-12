@@ -31,6 +31,8 @@ public class Pruebas {
         arbol.add(n15,n16,1);
         arbol.add(n8,n3,0);
         arbol.breadthFrist();
+
+        MenuArbol.menuTree();
     
     }
 
