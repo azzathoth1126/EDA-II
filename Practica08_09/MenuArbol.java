@@ -47,8 +47,6 @@ public class MenuArbol{
 
         Scanner scanner = new Scanner(System.in);
 
-        ArbolBInario arbolito = new ArbolBInario();
-
         boolean salir = false;
         int opcion = 0;
         int valor = 0;
@@ -62,21 +60,20 @@ public class MenuArbol{
 
         Nodo n1 = new Nodo(valor);
 
-        arbolito.add(valor);
+        ArbolBin arbolito = new ArbolBin(n1);
         
         valor = 0;
 
         while (!salir){
 
             System.out.println("\n    Que quieres hacer");
-            System.out.println("\n1.  Crear Árbol");
-            System.out.println("2.  Agregar Dato");
-            System.out.println("3.  Eliminar Dato");
-            System.out.println("4.  Imprimir Dato (BFS)");
-            System.out.println("5.  Notación Prefija (PreOrden)");
-            System.out.println("7.  Notación Prefija (InOrden)");
-            System.out.println("7.  Notación Prefija (PostOrden)");
-            System.out.println("8.  Salir");
+            System.out.println("1.  Agregar Dato");
+            System.out.println("2.  Eliminar Dato");
+            System.out.println("3.  Imprimir Dato (BFS)");
+            System.out.println("4.  Notación Prefija (PreOrden)");
+            System.out.println("5.  Notación Prefija (InOrden)");
+            System.out.println("6.  Notación Prefija (PostOrden)");
+            System.out.println("7.  Salir");
 
             opcion = scanner.nextInt();
 
@@ -86,14 +83,24 @@ public class MenuArbol{
                     System.out.println("\n Que valor lleva el nuevo nodo: ");
                     valor = scanner.nextInt();
 
-                    arbolito.add(valor);
+                    Nodo n2 = new Nodo(valor);
+
+                    if(valor > n1.valor){
+                        arbolito.add(n1,n2,1);
+                    }else{
+                        arbolito.add(n1,n2,0);
+                    }
 
                     break;
 
                 case 2:
                     break;
 
-                case 3:    
+                case 3:   
+
+                    System.out.println("\n\n");
+                    arbolito.breadthFrist();
+
                     break;
 
                 case 4:

@@ -7,6 +7,7 @@ public class ArbolBInario {
     }
 
 
+    /*
     public void insertar(int valor){
 
         if(this.raiz == null){
@@ -20,6 +21,8 @@ public class ArbolBInario {
     public void getValor(){
 
     }
+
+    */
 
     /*
     //Lanzamiento PreOrden
