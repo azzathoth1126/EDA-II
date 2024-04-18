@@ -32,7 +32,9 @@ public class Pruebas {
         arbol.add(n8,n3,0);
         arbol.breadthFrist();
 
-        MenuArbol.menuTree();
+        arbol.preOrden(n1);
+
+        //MenuArbol.menuTree();
     
     }
 

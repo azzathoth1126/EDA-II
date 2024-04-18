@@ -34,5 +34,17 @@ public class Nodo {
         this.der = der;
     }
 
+
+    //Obtener Nodo Derecho
+    public Nodo getDer(Nodo nodo){
+        return this.der;
+    }
+
+
+    //Obtener Nodo Izquierdo
+    public void getIzq(Nodo nodo){
+        return this.izq;
+    }
+
     
 }
