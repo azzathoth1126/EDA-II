@@ -82,6 +82,12 @@ public class MenuArbol{
 
             switch (opcion) {
                 case 1:
+                    
+                    System.out.println("\n Que valor lleva el nuevo nodo: ");
+                    valor = scanner.nextInt();
+
+                    arbolito.add(valor);
+
                     break;
 
                 case 2:
