@@ -2,16 +2,6 @@ import java.util.Scanner;
 
 public class MenuArbol{
 
-    /*
-    //Atributo de clase
-    private Scanner scanner;
-
-    //Metodo Scanner
-    public MenuArbol(){
-        this.scanner = new Scanner(System.in);
-    }
-    */
-
     public static void menuTree(){
 
         //MenuArbol  menuArbol = new MenuArbol();
@@ -57,12 +47,24 @@ public class MenuArbol{
 
         Scanner scanner = new Scanner(System.in);
 
+        ArbolBInario arbolito = new ArbolBInario();
 
         boolean salir = false;
         int opcion = 0;
+        int valor = 0;
 
         System.out.println("\n\n");
         System.out.println("            Menu Arbol Binario");
+
+        System.out.println("\n  Crear Árbol");
+        System.out.println("\nDame el valor del nodo Raiz: ");
+        valor = scanner.nextInt();
+
+        Nodo n1 = new Nodo(valor);
+
+        arbolito.add(valor);
+        
+        valor = 0;
 
         while (!salir){
 
@@ -97,13 +99,11 @@ public class MenuArbol{
                 case 6:
                     break;
 
-                case 7:    
-                    break;
-
-                case 8:
+                case 7: 
                     salir = true;
-                    break;
 
+                    break;
+             
                 default:
                     System.out.println("\nOpción no válida. Por favor, seleccione una opción válida.");
             }
