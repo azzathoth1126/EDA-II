@@ -103,18 +103,30 @@ public class MenuArbol{
 
                     break;
 
-                case 4:
+                case 4: // Lanzamiento Pre Orden
+
+                    System.out.println("\n\n");
+                    System.out.println("Notacion PreOrden");
+                    arbolito.preOrden(n1);
                     break;
 
-                case 5:
+                case 5: //Lanzamiento In Orden
+
+                    System.out.println("\n\n");
+                    System.out.println("Notacion InOrden");
+                    arbolito.inOrden(n1);
                     break;
 
-                case 6:
+                case 6: //Lanzamiento Post Orden
+
+                    System.out.println("\n\n");
+                    System.out.println("Notacion PostOrden");
+                    arbolito.postOrden(n1);
                     break;
 
-                case 7: 
+                case 7: //Salir
+
                     salir = true;
-
                     break;
              
                 default:

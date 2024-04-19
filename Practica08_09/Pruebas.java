@@ -46,7 +46,7 @@ public class Pruebas {
         System.out.println("Notacion PostOrden");
         arbol.postOrden(n1);
 
-        //MenuArbol.menuTree();
+        MenuArbol.menuTree();
     
     }
 
