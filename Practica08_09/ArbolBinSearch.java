@@ -13,10 +13,12 @@ public class ArbolBinSearch {
         root = new Nodo(val);
     }
 
-    public void add(Nodo nPadre, int valor){
+    public void add(Nodo nPadre, int dato){
 
-        if(nPadre.valor > valor && nPadre.der == null){
-            nPadre.getDer() = valor
+        if(nPadre.valor > dato){
+            if(nPadre.getDer() == null){
+                nPadre.der = dato
+            }
         }else()
 
     }
