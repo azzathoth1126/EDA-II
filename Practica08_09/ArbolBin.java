@@ -37,6 +37,8 @@ public class ArbolBin {
         System.out.println(n.valor + " ");
     }	
 
+
+    //Recorrido en PreOrden 
     public void preOrden(Nodo nodo){
         if(nodo == null){
             return;
@@ -49,6 +51,7 @@ public class ArbolBin {
     }
     
 
+    //Recorrido en InOrden
     public void inOrden(Nodo nodo){
         if(nodo == null){
             return;
@@ -61,6 +64,7 @@ public class ArbolBin {
     }
 
 
+    //Recorrido en PostOrden 
     public void postOrden(Nodo nodo){
         if(nodo == null){
             return;
