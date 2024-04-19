@@ -33,8 +33,8 @@ public class ArbolBin {
             padre.setDer(hijo);
     }
     
-    protected Nodo visit(Nodo n){
-        System.out.println(n.valor+" ");
+    protected void visit(Nodo n){
+        System.out.println(n.valor + " ");
     }	
 
     public void preOrden(Nodo nodo){
@@ -42,6 +42,7 @@ public class ArbolBin {
             return;
         }else{
            visit(nodo);
+           System.out.println(", ");
            preOrden(nodo.getIzq(nodo));
            preOrden(nodo.getDer(nodo));
         }
@@ -54,6 +55,7 @@ public class ArbolBin {
         }else{
            inOrden(nodo.getIzq(nodo));
            visit(nodo);
+           System.out.println(", ");
            inOrden(nodo.getDer(nodo));
         }
     }
@@ -66,8 +68,11 @@ public class ArbolBin {
            postOrden(nodo.getIzq(nodo));
            postOrden(nodo.getDer(nodo));
            visit(nodo);
+           System.out.println(", ");
         }
     }
+
+
     public void breadthFrist(){
         Nodo r = root;
         Queue<Nodo> queue = new LinkedList();

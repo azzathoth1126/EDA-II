@@ -24,6 +24,7 @@ public class Pruebas {
         Nodo n3 = new Nodo(3);
         
         arbol = new ArbolBin(n1);
+
         arbol.add(n7,n15,0);
         arbol.add(n7,n8,1);
         arbol.add(n9,n4,0);
@@ -32,7 +33,18 @@ public class Pruebas {
         arbol.add(n8,n3,0);
         arbol.breadthFrist();
 
+
+        System.out.println("\n\n");
+        System.out.println("Notacion PreOrden");
         arbol.preOrden(n1);
+
+        System.out.println("\n\n");
+        System.out.println("Notacion InOrden");
+        arbol.inOrden(n1);
+
+        System.out.println("\n\n");
+        System.out.println("Notacion PostOrden");
+        arbol.postOrden(n1);
 
         //MenuArbol.menuTree();
     

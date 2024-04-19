@@ -8,6 +8,7 @@
  *
  * @author Edgar
  */
+
 public class Nodo {
     
     int valor;
@@ -37,13 +38,13 @@ public class Nodo {
 
     //Obtener Nodo Derecho
     public Nodo getDer(Nodo nodo){
-        return this.der;
+        return nodo.der;
     }
 
 
     //Obtener Nodo Izquierdo
-    public void getIzq(Nodo nodo){
-        return this.izq;
+    public Nodo getIzq(Nodo nodo){
+        return nodo.izq;
     }
 
     
