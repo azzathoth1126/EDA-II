@@ -42,7 +42,7 @@ public class ArbolBin {
             return;
         }else{
            visit(nodo);
-           System.out.println(", ");
+           //System.out.println(", ");
            preOrden(nodo.getIzq(nodo));
            preOrden(nodo.getDer(nodo));
         }
@@ -55,7 +55,7 @@ public class ArbolBin {
         }else{
            inOrden(nodo.getIzq(nodo));
            visit(nodo);
-           System.out.println(", ");
+           //System.out.println(", ");
            inOrden(nodo.getDer(nodo));
         }
     }
@@ -68,7 +68,7 @@ public class ArbolBin {
            postOrden(nodo.getIzq(nodo));
            postOrden(nodo.getDer(nodo));
            visit(nodo);
-           System.out.println(", ");
+           //System.out.println(", ");
         }
     }
 
