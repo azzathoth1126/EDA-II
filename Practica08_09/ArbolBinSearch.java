@@ -1,9 +1,24 @@
-public class ArbolBInario {
 
-    Nodo raiz;
+public class ArbolBinSearch {
 
-    public ArbolBInario(){
-        raiz = null;
+    Nodo root;
+    
+
+    public ArbolBinSearch(){
+        root=null;
+    }
+
+
+    public ArbolBinSearch(int val){
+        root = new Nodo(val);
+    }
+
+    public void add(Nodo nPadre, int valor){
+
+        if(nPadre.valor > valor && nPadre.der == null){
+            nPadre.getDer() = valor
+        }else()
+
     }
 
 
