@@ -144,24 +144,41 @@ public class MenuArbol{
 
         boolean salir = false;
         int opcion = 0;
+        int valor = 0;
 
         System.out.println("\n\n");
         System.out.println("            Menu Arbol Binario de Busqueda");
 
+        System.out.println("\n  Crear Árbol");
+        System.out.println("\nDame el valor del nodo Raiz: ");
+        valor = scanner.nextInt();
+
+        Nodo n1 = new Nodo(valor);
+
+        ArbolBinSearch arbolito = new ArbolBinSearch(n1);
+        
+
         while (!salir){
 
             System.out.println("\n    Que quieres hacer");
-            System.out.println("\n1.  Crear Árbol");
-            System.out.println("2.  Agregar Dato");
-            System.out.println("3.  Eliminar Dato");
-            System.out.println("4.  Buscar");
-            System.out.println("5.  Imprimir Árbol");
-            System.out.println("6.  Salir");
+            System.out.println("1.  Agregar Dato");
+            System.out.println("2.  Eliminar Dato");
+            System.out.println("3.  Buscar");
+            System.out.println("4.  Imprimir Árbol");
+            System.out.println("5.  Salir");
 
             opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
+
+                    System.out.println("\n Que valor lleva el nuevo nodo: ");
+                    valor = scanner.nextInt();
+
+                    Nodo n2 = new Nodo(valor);
+
+                    arbolito.add(n1,n2);
+
                     break;
 
                 case 2:
@@ -171,12 +188,14 @@ public class MenuArbol{
                     break;
 
                 case 4:
+
+                    System.out.println("\n\n");
+                    System.out.println("Notacion PreOrden");
+                    arbolito.preOrden(n1);
+
                     break;
 
                 case 5:
-                    break;
-
-                case 6:
                     salir = true;
                     break;
 
