@@ -12,7 +12,7 @@ public class Archivo {
         if (archivo.exists()){
             System.out.println("Ya existe el archivo.\n");
 
-            System.out.println("Nombre de Archivo: " + archivo.getName());
+            /*System.out.println("Nombre de Archivo: " + archivo.getName());
             System.out.println("Absolute path: " + archivo.getAbsolutePath());
             System.out.println("Permisos de escritura: " + archivo.canWrite());
             System.out.println("Permisos de lectura: " + archivo.canRead());
@@ -20,7 +20,7 @@ public class Archivo {
             System.out.println("Carpeta contenedora: " + archivo.getParent());
             System.out.println("Es archivo: " + archivo.isFile());
             System.out.println("Es directorio " + archivo.isDirectory());
-            System.out.println("Es oculto: " + archivo.isHidden());
+            System.out.println("Es oculto: " + archivo.isHidden());*/
 
         } else{
             FileWriter fw = new FileWriter(archivo);
@@ -30,6 +30,15 @@ public class Archivo {
 
         }
         
+    }
+
+    public void crearDirectorio(String ubicacion) throws IOException{
+        File director = new File (ubicacion);
+        if (director.exists()){
+            System.out.println("Esta ubicacion ya existe");
+        }else{
+            
+        }
     }
     
     public void escribir(String nombre, boolean modo) throws IOException{
