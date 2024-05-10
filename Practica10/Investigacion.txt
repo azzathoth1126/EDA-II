@@ -50,14 +50,20 @@ a un archivo o sobreescribir la información anterior?
 FileNotFoundException en ningún lugar, y por qué la excepción no ocurre cuando el usuario
 ingresa un archivo que no existe?
 
-    |
+    https://es.stackoverflow.com/questions/341751/qu%C3%A9-es-realmente-throws
+    https://elvex.ugr.es/decsai/java/pdf/B2-excepciones.pdf
+
+    Esto es por que no se usa try-cath para las excepción sino throws que lanza la excepción en vez de atraparla
+    y por lo mismo que no retiene al excepción es que puede continuar con el funcionamiento normal del programa
 
 
 6.- Modifica el programa de tal manera que, al momento de crear un nuevo archivo, el usuario
 indique la ruta donde el lo quiera crear (por ejemplo el escritorio)
 Agrega en tu cuestionario, solo el fragmento o fragmentos de código modificados
 
+    https://decodigo.com/java-crear-directorio-o-carpeta
+
 
 7.- Indica qué tendrías qué agregar al programa para que el usuario pueda eliminar un
-directorio con con archivos y otros directorios
+directorio con archivos y otros directorios
 
