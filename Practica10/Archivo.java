@@ -1,5 +1,5 @@
 
-package practica10eda;
+//package practica10eda;
 
 import java.io.*;
 import java.util.Scanner;
@@ -51,3 +51,4 @@ public class Archivo {
 
 //https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html
 //https://docs.oracle.com/en/java/javase/11/docs/api/allclasses.html
+    

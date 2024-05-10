@@ -1,4 +1,4 @@
-package practica10eda;
+//package practica10eda;
 
 import java.io.IOException;
 import java.util.Scanner;

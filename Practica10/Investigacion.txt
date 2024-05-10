@@ -1,0 +1,63 @@
+1.- Investiga en la api de Java para qué sirve la clase File, y para qué sirven los siguientes métodos
+
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html
+
+boolean    canRead().- Tests whether the application can read the file denoted by this abstract pathname.
+boolean    canWrite().- Tests whether the application can modify the file denoted by this abstract pathname.
+boolean    createNewFile().- Atomically creates a new, empty file named by this abstract pathname if and only if a file with this name does not yet exist.
+String    getName().- Returns the name of the file or directory denoted by this abstract pathname.
+String    getPath().- Converts this abstract pathname into a pathname string.
+long    length().- Returns the length of the file denoted by this abstract pathname.
+
+
+2.- Investiga las principales diferencias entre las clases
+
+https://es.stackoverflow.com/questions/70980/diferencias-entre-clases-de-lectura-de-ficheros
+
+    FileReader y BufferedREader
+
+        FileReader es utilizado para leer archivos de caracteres, es decir archivos de texto plano que 
+        contengan caracteres ASCII
+
+        BufferedReader También se puede usar para leer archivos de texto, pero sin embargo puede ser 
+        utilizado para leer otro tipo de contenido que no necesariamente provenga de un archivo de texto, 
+        además de que BufferedReader soporta UTF.
+
+    File Writer y BufferedWriter
+
+        BufferedWriter también tendría las mismas características que BufferedReader sólo que se usa para 
+        escribir contenido en archivos u otros lados.
+
+        FileWriter tiene las mismas características que FileReader sólo que se usa para escribir texto en 
+        archivos.
+
+
+3.- ¿Cómo hace el programa proporcionado para establecer la diferencia entre agregar contenido 
+a un archivo o sobreescribir la información anterior?
+
+    Al momento de seleccionar una opcion en el menu te da a elegir entre sobreescribir o añadir, y, aunque 
+    usen un mismo metodo este hace acciones diferentes de acuerdo a si recibe como parametro un true o false
+
+
+4.- ¿Qué ocurre si el usuario desea agregar contenido a un archivo pero no indica la extensión?
+¿Por qué?
+
+    No manda un mensaje "No existe el archivo", esto por que al momento de buscar el archivo usamos el metodo
+    nombre.exists() este verifica si existe el archivo y de ser asi manda un treu
+
+
+5.- ¿Por qué el programa proporcionado no maneja la excepción (no tiene un try-catch)
+FileNotFoundException en ningún lugar, y por qué la excepción no ocurre cuando el usuario
+ingresa un archivo que no existe?
+
+    |
+
+
+6.- Modifica el programa de tal manera que, al momento de crear un nuevo archivo, el usuario
+indique la ruta donde el lo quiera crear (por ejemplo el escritorio)
+Agrega en tu cuestionario, solo el fragmento o fragmentos de código modificados
+
+
+7.- Indica qué tendrías qué agregar al programa para que el usuario pueda eliminar un
+directorio con con archivos y otros directorios
+
