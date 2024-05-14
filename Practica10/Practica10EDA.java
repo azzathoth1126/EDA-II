@@ -14,7 +14,7 @@ public class Practica10EDA{
         Archivo arch = new Archivo();
         System.out.println("Archivos :D");
         do{
-            System.out.println("\n1.Crear Archivo\n2.Sobreescribir en el archivo\n3.Añadir contenido en el archivo\n4.Elimina el archivo\n5.Salir\n");
+            System.out.println("\n1.Crear Archivo\n2.Sobreescribir en el archivo\n3.Añadir contenido en el archivo\n4.Informacion del archivo\n5.Elimina el archivo\n6.Salir\n");
             o=sc.nextInt();
             switch(o){
                 case 1:
@@ -35,15 +35,20 @@ public class Practica10EDA{
                 case 4:
                     System.out.println("Ingresa el Nombre del archivo con su extension:");
                     nombre=sc.next();
+                    arch.info(nombre);
+                    break;
+                case 5:
+                    System.out.println("Ingresa el Nombre del archivo con su extension:");
+                    nombre=sc.next();
                     arch.eliminar(nombre);
                     break;
                 default:
-                    if (o!=5){
+                    if (o!=6){
                         System.out.println("Opción inválida.");
                     }
                     break;
             }
-        }while(o!=5);
+        }while(o!=6);
     }
     
 }

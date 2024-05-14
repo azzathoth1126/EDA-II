@@ -1,6 +1,7 @@
 
 //package practica10eda;
 
+import javax.swing.JFileChooser;
 import java.io.*;
 import java.util.Scanner;
 
@@ -65,6 +66,25 @@ public class Archivo {
         }
         else{
             System.out.println("No existe el archivo.");
+        }
+    }
+
+    public void info(String nombre) throws IOException{
+
+        File archivo = new File (nombre);
+        if (archivo.exists()){
+
+            System.out.println("\nNombre de Archivo: " + archivo.getName());
+            System.out.println("Absolute path: " + archivo.getAbsolutePath());
+            System.out.println("Permisos de escritura: " + archivo.canWrite());
+            System.out.println("Permisos de lectura: " + archivo.canRead());
+            System.out.println("Tamaño del archivo: " + archivo.length());
+            System.out.println("Carpeta contenedora: " + archivo.getParent());
+            System.out.println("Es archivo: " + archivo.isFile());
+            System.out.println("Es directorio " + archivo.isDirectory());
+            System.out.println("Es oculto: " + archivo.isHidden());
+        }else{
+            System.out.println("\nEl archivo no existe");
         }
     }
     
