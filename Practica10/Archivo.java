@@ -10,27 +10,17 @@ public class Archivo {
     
     public void crearArchivo(String nombre) throws IOException{
 
-        JFileChooser fileChooser = new JFileChooser();
         File archivo = new File (nombre);
-
-        int seleccion = fileChooser.showSaveDialog(null);
-
-        if (seleccion == JFileChooser.APPROVE_OPTION) {
-            FileWriter fw = new FileWriter(archivo);
-            System.out.println("Se creó el archivo exitosamente.\n");  
-            escribir(nombre, false);
-            fw.close(); 
-        }
-
-        /*if (archivo.exists()){
-                System.out.println("Ya existe el archivo.\n");
+        
+        if (archivo.exists()){
+            System.out.println("Ya existe el archivo.\n");
         } else{
             FileWriter fw = new FileWriter(archivo);
             System.out.println("Se creó el archivo exitosamente.\n");  
             escribir(nombre, false);
             fw.close();      
-        }*/
-            
+
+        }
         
     }
 
