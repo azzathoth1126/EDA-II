@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <omp.h>
 
 int main(){
-	#pragma omp parallel
+	#pragma omp parallel // num_threads(8)
 	{
         int i;
-		printf("Hola Mundo\n");
+		printf("Hola Mundo\n")
 		for(i=0; i<10; i++);
 			printf("Iteracion: %d\n", i);
 	}
