@@ -36,16 +36,15 @@ void llenarArreglo(int *a){
 
 void suma(int *A, int *B, int *C){
 
-    int i, tid, inicio, fin;
+    int i, tid;
     omp_set_num_threads(2);
 
-    #pragma omp parallel private(inicio, fin,tid, i)
+    #pragma omp parallel private(tid)
     {
         tid = omp_get_thread_num();
-        inicio = tid*5;
-        fin = (tid+1)*5;
+        #pragma omp for
 
-        for(i=inicio; i<fin; i++)
+        for(i=0; i<n; i++)
         {
             C[i] = A[i]+B[i];
             printf("Hilo %d calculo C[%d] = %d\n", tid, i, C[i]);

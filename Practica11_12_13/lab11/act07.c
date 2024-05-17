@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include <omp.h>
 
 int main(){
-	int i;
-	#pragma omp parallel private(i) //num_threads(4)
+	#pragma omp parallel
 	{
-        //int i;
+        int i;
 		printf("Hola Mundo\n");
+
+        #pragma omp for
 		for(i=0; i<10; i++)
 			printf("Iteracion: %d\n", i);
 	}
-		printf("Adios \n");
+	printf("Adios \n");
 	return 0;
 }
 
