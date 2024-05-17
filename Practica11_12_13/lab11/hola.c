@@ -2,13 +2,14 @@
 #include <omp.h>
 
 int main(){
-	#pragma omp parallel // num_threads(8)
+	int i;
+	#pragma omp parallel private(i) //num_threads(4)
 	{
-        int i;
-		printf("Hola Mundo\n")
-		for(i=0; i<10; i++);
+        //int i;
+		printf("Hola Mundo\n");
+		for(i=0; i<10; i++)
 			printf("Iteracion: %d\n", i);
 	}
-	printf("Adios \n");
+		printf("Adios \n");
 	return 0;
 }
