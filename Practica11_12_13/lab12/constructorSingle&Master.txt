@@ -8,7 +8,7 @@ y salida de datos*/
 //Ejemplo y sintaxis de single
 void ejemplo(){
 
-    #pragma imp parallel
+    #pragma omp parallel
     {
         todosRealizanUnasActividades();
         #pragma omp single
