@@ -20,12 +20,10 @@ int main(int argc, char* argv[]){
     step= 1.0/(double)num_steps;
     empezar = omp_get_wtime();
 
-    #pragma omp parallel 
-    {
-        for(i=0; i<num_steps; i++){
-            x = (i + 0.5)*step;
-                sum = sum + 4.0/(1.0 + x*x);
-        }
+    #pragma omp for 
+    for(i=0; i<num_steps; i++){
+        x = (i + 0.5)*step;
+            sum = sum + 4.0/(1.0 + x*x);
     }
 
     pi = sum*step;
@@ -35,5 +33,4 @@ int main(int argc, char* argv[]){
     printf("El tiempo de calculo del numero pi es: %1f segundos\n", terminar-empezar);
 
     return 0;
-
 }
