@@ -7,6 +7,8 @@ pone en espera, hasta que el primer hilo termine su tarea*/
 
 // Usamos barrier para que sincronizar hilos en etapas del progama donde
 // se necesiten SINTAXIS
+
+
 void ejemplo(){
 
     #pragma omp parallel shared(A,B,C)
@@ -21,3 +23,6 @@ void ejemplo(){
         }
     }
 }
+
+
+

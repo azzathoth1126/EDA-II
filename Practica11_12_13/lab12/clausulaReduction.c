@@ -31,10 +31,8 @@ double prodPunto(double *a, double *b, int n){
     int i;
 
     #pragma omp parallel for
-    {
-        for(i=0; i<n; i++){
-            res += a[i]*a[i];
-        }
+    for(i=0; i<n; i++){
+        res += a[i]*a[i];
     }
 
     return res;
@@ -57,11 +55,10 @@ double prodPunto(double *a, double *b, int n){
         resp[tid] = 0;
 
         #pragma omp for
-        {
-            for(i=0; i<n; i++){
-                resp[tid] += a[i]*a[i];
-            }
+        for(i=0; i<n; i++){
+            resp[tid] += a[i]*a[i];
         }
+
 
         if(tid == 0){
             nth = omp_get_threads();
@@ -88,11 +85,10 @@ double prodPunto(double *a, double *b, int n){
     int i;
 
     #pragma omp parallel for reduction(+:res)
-    {
-        for(i=0; i<n; i++){
-            res += a[i]*b[i];
-        }
+    for(i=0; i<n; i++){
+        res += a[i]*b[i];
     }
+
 }
 
 
