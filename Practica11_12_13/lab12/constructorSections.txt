@@ -45,8 +45,8 @@ void ejemploH(){
 
 
 // Ejemplo, otra forma de ejecutar varias funciones de forma paralela
-// ejecutando de dos en dos funciones, de manera paralela para evitar
-// usar tantos recursos
+// ejecutando de dos en dos funciones o mas, de manera paralela
+
 void ejemploH(){
 
     #pragma omp parallel
