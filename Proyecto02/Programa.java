@@ -51,7 +51,7 @@ public class Programa {
                                 break;
                             case 2:
                                 int resultado = arbol.resolverExpresion(raiz);
-                                System.err.println("El resultado es: "+ resultado);
+                                System.err.println("\n  El resultado es: "+ resultado);
                                 break;
                             case 3:
                                 System.out.println("Saliendo\n");
