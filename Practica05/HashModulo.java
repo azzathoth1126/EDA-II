@@ -9,8 +9,6 @@ public class HashModulo {
 
         Scanner scan = new Scanner(System.in);
 
-        
-        
         int[][] tablaHas = new int[nElem][2];
 
         for(int i=0; i<nElem; i++){
@@ -28,7 +26,7 @@ public class HashModulo {
 
         while (condition) {
             System.out.println("\n1. Agregar elementos");
-            System.out.println("2. Imprimir lista");
+            System.out.println("2. Imprimir Tabla Hash");
             System.out.println("3. Buscar elemento");
             System.out.println("4. Eliminar elemento");
             System.out.println("5. Salir");
@@ -41,7 +39,7 @@ public class HashModulo {
                 case 1:
                     System.out.print("\nDame un numero de 9 digitos: ");
                     num = scan.nextInt();
-                    add(tablaHas, num);
+                    fPlegamiento(tablaHas, num, true);
                     break;
 
                 case 2:
@@ -52,9 +50,9 @@ public class HashModulo {
                     break;
 
                 case 3:
-                    System.out.print("\nDame la llave del elemento que buscas: ");
-                    int keyS = scan.nextInt();
-                    imprimir(tablaHas, keyS, false);
+                    System.out.print("\nDame el numero que buscas: ");
+                    int value = scan.nextInt();
+                    fPlegamiento(tablaHas, value, false);
                     break;
 
                 case 4:
@@ -77,7 +75,8 @@ public class HashModulo {
         scan.close();
     }
 
-    private static void add(int[][] arr, int val) {
+
+    private static void fPlegamiento(int[][] arr, int val, boolean modo) {
         String cadena = Integer.toString(val);
 
         int num1 = Integer.parseInt(cadena.substring(0, 3));
@@ -88,7 +87,11 @@ public class HashModulo {
 
         num4 = num4%17;
 
-        fPlegamiento(arr, val, num4);
+        if (modo){
+            add(arr, val, num4);
+        }else{ imprimir(arr, num4, modo); 
+
+        }
 
     }
 
@@ -101,11 +104,11 @@ public class HashModulo {
                 }
                 
             }
-        } else{
-            if (arr[key][1] == 0) {
-                System.out.println("\nEl elemento no existe\n");
-            } else System.out.println("\nElemento * " +arr[key][1]+ " * encontrado");
-        }
+        } else if (arr[key][1] == 0){
+            System.out.println("\nEl elemento no existe\nPuede estar en otro espacio de la tabla");
+
+        } else System.out.println("\nElemento * " +arr[key][1]+ " * encontrado en la posicion " +key);
+        
         
     }
 
@@ -118,7 +121,7 @@ public class HashModulo {
     }
 
 
-    private static void fPlegamiento(int[][] arr, int val, int mod){
+    private static void add(int[][] arr, int val, int mod){
         if(arr[mod][1] == 0){
             arr[mod][1] = val;
             arr[mod][0] = mod;
@@ -130,7 +133,7 @@ public class HashModulo {
                 mod--;
             }
             System.out.println("\nOcurrio una colision, arreglando el problema");
-            fPlegamiento(arr, val, mod);
+            add(arr, val, mod);
             
         } else if(mod<nElem){
             if(mod >= 0){
