@@ -8,30 +8,32 @@ import java.util.List;
 
 public class Grafo {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
        
+        //Creando una lista de listas de enteros (Integer)
         List<List<Integer>> graph = new ArrayList<>();
 
         addVertex(graph); // vértice 0
         addVertex(graph); // vértice 1
         addVertex(graph); // vértice 2
-        //Añadido en clase
-        addVertex(graph); // vértice 3
+
+        addVertex(graph); // vértice 3 //Añadido en clase
         addVertex(graph); // vértice 4
-        /*
-        addVertex(graph);
-        addVertex(graph);
-        addVertex(graph);
-        addVertex(graph);
-        addVertex(graph);
-        addVertex(graph);
-        */
+        
+        //Vertice para añadir
+        //addVertex(graph);
+        //addVertex(graph);
+        //addVertex(graph);
+        //addVertex(graph);
+        //addVertex(graph);
+        
 
        
+        //Crean una arista en tre vestices de izquierda a derecha
         addEdge(graph, 0, 1);
         addEdge(graph, 1, 2);
-        //Añadido en clase
-        addEdge(graph, 2, 3);
+
+        addEdge(graph, 2, 3);//Añadido en clase
         addEdge(graph, 3, 4);
 
 
@@ -42,21 +44,21 @@ public class Grafo {
 
         //System.out.println(graph.get(2));
         //System.out.println(graph.get(3));
-    }
+    }*/
 
     // Método para agregar un vértice al grafo
-    private static void addVertex(List<List<Integer>> graph) {
+    public void addVertex(List<List<Integer>> graph) {
         graph.add(new ArrayList<>());
     }
 
-    // Método para agregar una arista al grafo
-    private static void addEdge(List<List<Integer>> graph, int vertex1, int vertex2) {
+    // Método para agregar una arista entre nodos
+    public void addEdge(List<List<Integer>> graph, int vertex1, int vertex2) {
         graph.get(vertex1).add(vertex2);
         graph.get(vertex2).add(vertex1);
     }
 
     // Método para obtener los vértices del grafo
-    private static List<Integer> getVertices(List<List<Integer>> graph) {
+    public List<Integer> getVertices(List<List<Integer>> graph) {
         List<Integer> vertices = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             vertices.add(i);
@@ -66,14 +68,12 @@ public class Grafo {
     }
 
     // Método para obtener las aristas del grafo
-    private static List<String> getEdges(List<List<Integer>> graph) {
+    public List<String> getEdges(List<List<Integer>> graph) {
         List<String> edges = new ArrayList<>();
         for (int i = 0; i < graph.size(); i++) {
             for (int j : graph.get(i)) {
-                System.out.println("Yo " + j);
                 if (!edges.contains(j + "-" + i)) {
                     edges.add(i + "-" + j);
-                    //System.out.println(edges.get(i));
                 }
             }
         }
